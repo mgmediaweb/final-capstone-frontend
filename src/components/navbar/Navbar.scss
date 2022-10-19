@@ -1,0 +1,91 @@
+@import "../../config";
+
+.navbar {
+  display: none;
+}
+
+// #######################################################################################
+// ################################### DESKTOP VERSION ###################################
+// #######################################################################################
+
+@media (min-width: $breakpoint-tablet) {
+  nav {
+    width: 80%;
+    font-weight: 700;
+    font-size: 1.15rem;
+
+    ul {
+      list-style-type: none;
+    }
+
+    a {
+      background-color: $color-white;
+      color: $color-dark;
+      display: block;
+      padding: $padding * 1.25;
+      padding-bottom: $padding * 0.9;
+      text-decoration: none;
+      transition: $transition;
+
+      &:hover {
+        background-color: lighten($color-secondary, 25);
+        text-decoration: none;
+        transition: $transition;
+      }
+    }
+
+    .active, .active:hover {
+      background-color: $color-primary;
+      color: $color-white; 
+    }    
+  }
+
+  .img-container {
+    align-items: center;
+    display: flex;
+    height: $navbar-size;
+    justify-content: center;
+    margin-bottom: 5vh;
+    width: $navbar-size;
+  
+    .logo-main {
+      height: auto;
+      width: 50%;
+    }  
+  }  
+
+  .navbar {
+    background-color: $color-white;
+    border-right: 1px solid $color-secondary;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: $navbar-size;
+    z-index: 1000;
+  }
+
+  .navTop {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social-icons {
+    padding: $padding;
+    text-align: center;
+    width: 100%;
+
+    ul li {
+      display: inline-block;  
+      margin: 0 $padding/2;
+    }
+
+    p {
+      font-size: 0.75rem;
+    }
+  }
+}
