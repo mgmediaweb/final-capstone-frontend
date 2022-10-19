@@ -17,9 +17,107 @@ h1 {
 }
 
 .container {
-  background-color: aqua;
+  background-image: url('./assets/images/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: cover;
   height: 100vh;
+  width: calc(100% - $navbar-size);
+  margin: 0 0 0 $navbar-size;
+  padding: $padding;
+}
+
+.detailBox {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+
+  h1 {
+    color: $color-dark;
+    font-weight: 400;
+    line-height: 1.25em;
+    margin-bottom: $padding;
+    text-align: end;
+  }
+
+  h2 {
+    color: $color-dark;
+    font-weight: 400;
+    text-align: end;
+  }  
+
+  p {
+    line-height: 1.1em;
+    text-align: end;
+  }
+
+  table {
+    background-color: rgba($color-white, 0.5);
+    border-collapse: collapse;
+    border: none;
+    font-size: 1.1rem;
+    margin: $padding 0 $padding*2 0;
+    padding: 0;
+
+    td {
+      padding: calc($padding/2) $padding;
+    }
+
+    tr:nth-child(even) {
+      background-color: $color-silver;
+    }
+  }
+}
+
+.text {
+  &-center {
+    text-align: center;
+  }
+
+  &-end {
+    text-align: end;
+  }
+
+  &-start {
+    text-align: left;
+  }
+}
+
+.whiteCortain {
+  align-items: center;
+  background-color: aqua;
+  background: rgba($color-white, 0.5);
+  background: linear-gradient(90deg, rgba($color-white, 0) 0%, rgba($color-white, 1) 100%);
+  display: flex;
+  height: 100vh;
+  justify-content: flex-end;
+  padding-right: 5vw;
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 100%;
-  margin: 0;
-  padding: 0 0 0 $navbar-size;  
+}
+
+// #######################################################################################
+// #################################### TABLET $ DESKTOP #################################
+// #######################################################################################
+
+@media (min-width: $breakpoint-tablet) {
+  .detailBox {
+    width: 75%;
+  }
+
+  .whiteCortain {
+    width: 60%;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .detailBox {
+    width: 50%;
+  }  
+  .whiteCortain {
+    width: 40%;
+  }
 }

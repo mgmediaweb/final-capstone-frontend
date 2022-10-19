@@ -1,9 +1,9 @@
 const HomeScreen = () => {
-  const msj = 'hola mundo';
+  const msj = 'home';
 
   return (
     <div className="container">
-      <h3>{msj}</h3>
+      <h1>{msj}</h1>
     </div>
   );
 };

@@ -28,7 +28,7 @@
       transition: $transition;
 
       &:hover {
-        background-color: lighten($color-secondary, 25);
+        background-color: $color-silver;
         text-decoration: none;
         transition: $transition;
       }
@@ -37,26 +37,30 @@
     .active, .active:hover {
       background-color: $color-primary;
       color: $color-white; 
-    }    
+    }  
   }
 
   .img-container {
+    background:  url(../../assets/images/logo.png) no-repeat;
+    background-position: center center;
+    background-size: auto 35%;
     align-items: center;
     display: flex;
     height: $navbar-size;
     justify-content: center;
     margin-bottom: 5vh;
+    transition: $transition;
     width: $navbar-size;
-  
-    .logo-main {
-      height: auto;
-      width: 50%;
-    }  
+
+    &:hover {
+      opacity: 0.5;
+      transition: $transition;
+    }
   }  
 
   .navbar {
     background-color: $color-white;
-    border-right: 1px solid $color-secondary;
+    border-right: 1px solid $color-silver;
     display: flex;
     flex-direction: column;
     height: 100vh;

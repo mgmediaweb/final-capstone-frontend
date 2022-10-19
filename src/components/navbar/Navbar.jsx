@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import {
   FaFacebookF,
   FaGooglePlusG,
@@ -10,31 +10,29 @@ import './Navbar.scss';
 const Navbar = () => (
   <div className="navbar">
     <div className="navTop">
-      <Link to="/" className="img-container">
-        <img src="./assets/images/logo.png" alt="IMDB Logo" className="logo-main" />
-      </Link>
+      <Link to="/" className="img-container" />
 
       <nav>
         <ul>
           <li>
-            <Link to="/" className="active">
+            <NavLink to="/detail/1">
               MODELS
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/">
+            <NavLink to="/lifestyle">
               LIFESTYLE
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/">
+            <NavLink to="/shop">
               SHOP
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/">
+            <NavLink to="/testdrive">
               TEST DRIVE
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>
