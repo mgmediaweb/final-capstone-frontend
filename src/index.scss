@@ -22,8 +22,8 @@ h1 {
   background-position: center left;
   background-size: cover;
   height: 100vh;
-  width: calc(100% - $navbar-size);
-  margin: 0 0 0 $navbar-size;
+  width: 100%;
+  margin: 0;
   padding: $padding;
 }
 
@@ -104,6 +104,11 @@ h1 {
 // #######################################################################################
 
 @media (min-width: $breakpoint-tablet) {
+  .container {
+    margin: 0 0 0 $navbar-size;
+    width: calc(100% - $navbar-size);
+  }
+
   .detailBox {
     width: 75%;
   }
@@ -114,6 +119,10 @@ h1 {
 }
 
 @media (min-width: $breakpoint-desktop) {
+  .container {
+    margin: 0 0 0 $navbar-size;
+    width: calc(100% - $navbar-size);
+  }  
   .detailBox {
     width: 50%;
   }  
