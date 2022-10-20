@@ -4,7 +4,7 @@
   background-color: $color-primary;
   color: $color-white;
   height: 100vh;
-  max-width: 300px;
+  max-width: $booking-size;
   width: 100%;
   padding: $padding*1.5;
   position: fixed;
@@ -12,7 +12,7 @@
   top: 0;
   z-index: 999;
 
-  h1 {
+  h2 {
     color: $color-white;
     font-weight: 700;
     font-size: 1.5rem;

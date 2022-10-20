@@ -25,11 +25,11 @@ h1 {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 100% auto;
-  height: 100vh;
-  width: 100%;
+  min-height: 100vh;
   margin: 0;
   padding: $padding;
   position: relative;
+  width: 100%;
 }
 
 .detailBox {
@@ -88,6 +88,30 @@ h1 {
     font-size: 1rem;
     padding: $padding $padding*0.75;
     width: 100%;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.page {
+  &-booking {
+    align-items: center;
+    background-image: url('./assets/images/booking_bg.jpg') !important;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: $padding * 3 $padding;
+
+    p {
+      color: $color-white;
+      font-size: 1.25rem;
+      padding-bottom: $padding * 2;
+      max-width: 960px;
+      width: 80%;
+    }
   }
 }
 
