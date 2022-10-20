@@ -12,7 +12,7 @@ const createDate = (dateStr) => {
   return new Date(dateArr[0], parseInt(dateArr[1], 10) - 1, parseInt(dateArr[2], 10));
 };
 
-const Slider = (props) => {
+const Booking = (props) => {
   const {
     btnAxn,
     price,
@@ -70,7 +70,22 @@ const Slider = (props) => {
       <div className="centerForm">
         <form id="bookingForm" action="#" method="get">
           <input type="hidden" name="user" value={user} />
-          <input type="hidden" name="vehicle" value={vehicle} />
+
+          <div className="add-padding-below">
+            <label htmlFor="vehicle">Vehicle</label>
+            <select
+              name="vehicle"
+              className="form-field"
+              defaultValue={vehicle || ''}
+              required
+            >
+              <option value="">Select one</option>
+              <option value="1">Ferrari Testarossa - 1996</option>
+              <option value="2">Iso Automovil Isseta - 1956</option>
+              <option value="3">Tesla Model 3 - 2021</option>
+              <option value="4">Roll Royce Gost - 2022</option>
+            </select>
+          </div>
 
           <div className="add-padding-below">
             <label htmlFor="date-start">Start Date</label>
@@ -137,7 +152,7 @@ const Slider = (props) => {
   );
 };
 
-Slider.propTypes = {
+Booking.propTypes = {
   btnAxn: PropTypes.func.isRequired,
   state: PropTypes.bool,
   price: PropTypes.number.isRequired,
@@ -145,8 +160,8 @@ Slider.propTypes = {
   vehicle: PropTypes.number.isRequired,
 };
 
-Slider.defaultProps = {
+Booking.defaultProps = {
   state: false,
 };
 
-export default Slider;
+export default Booking;

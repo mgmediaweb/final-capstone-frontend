@@ -13,6 +13,7 @@
 ### Install
 
 To view this document on your local computer:
+
 - Clone this repository.
 - Install dependencies (npm install).
 - Run Webpack Bundle (npm run start).
@@ -34,6 +35,24 @@ To view this document on your local computer:
 - GitHub: [@mgmediaweb](https://github.com/mgmediaweb)
 - Twitter: [@GonzoMedinaDev](https://twitter.com/GonzoMedinaDev)
 - LinkedIn: [gonzalo-medina-g](https://www.linkedin.com/in/gonzalo-medina-g/)
+
+👤 **Giuseppe Tomasini**
+
+- GitHub: [@GiuseppeTG](https://github.com/GiuseppeTG)
+- Twitter: [@giusetomasini](https://twitter.com/giusetomasini)
+- LinkedIn: [Giuseppe Tomasini](https://www.linkedin.com/in/giuseppe-tomasini-g/)
+
+👤 **Elson Otake**
+
+- GitHub: [elsonotake](https://github.com/elsonotake)
+- Twitter: [@elsonotake](https://twitter.com/elsonotake)
+- LinkedIn: [elsonotake](https://linkedin.com/in/elsonotake)
+
+## 👤 **Marco Antonio Hincapié Montes**
+
+- GitHub: [@AntonioHincapie](https://github.com/AntonioHincapie)
+- Twitter: [@MarcoHincapie](https://twitter.com/MarcoHincapie)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/antoniohincapie/)
 
 ## 🤝 Contributing
 
