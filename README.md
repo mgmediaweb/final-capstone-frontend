@@ -41,6 +41,13 @@ To view this document on your local computer:
 - Twitter: [@giusetomasini](https://twitter.com/giusetomasini)
 - LinkedIn: [Giuseppe Tomasini](https://www.linkedin.com/in/giuseppe-tomasini-g/)
 
+👤 **Elson Otake**
+
+- GitHub: [elsonotake](https://github.com/elsonotake)
+- Twitter: [@elsonotake](https://twitter.com/elsonotake)
+- LinkedIn: [elsonotake](https://linkedin.com/in/elsonotake)
+
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
