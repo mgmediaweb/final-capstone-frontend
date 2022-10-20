@@ -15,11 +15,13 @@ const createDate = (dateStr) => {
 const Booking = (props) => {
   const {
     btnAxn,
+    close,
     price,
-    user,
     state,
     vehicle,
   } = props;
+
+  const user = 1; // GET USER ID FROM THE SESSION
 
   const dateStart = useRef();
   const dateEnd = useRef();
@@ -40,7 +42,7 @@ const Booking = (props) => {
       const diffDays = Math.round((createDate(dateEndVal) - createDate(dateStartVal)) / oneDay) + 1;
       const rentCost = diffDays * price;
 
-      if (rentCost > 0) {
+      if (diffDays >= 0) {
         setDays(diffDays);
         setCost(numberFormat.format(rentCost));
       } else {
@@ -54,19 +56,19 @@ const Booking = (props) => {
   };
 
   const sendForm = () => {
-    /* put some validation here */
+    /* PUT SOME VALIDATION HERE */
     document.getElementById('bookingForm').submit();
   };
 
   return (
     <div className={state ? 'booking book-show' : 'booking book-hide'}>
       <div
-        className="closeBtn"
+        className={close ? 'closeBtn' : 'hide'}
         onClick={() => btnAxn(!state)}
       >
         <FaTimes className="icon" />
       </div>
-      <h1>BOOKING</h1>
+      <h2>BOOKING</h2>
       <div className="centerForm">
         <form id="bookingForm" action="#" method="get">
           <input type="hidden" name="user" value={user} />
@@ -153,15 +155,19 @@ const Booking = (props) => {
 };
 
 Booking.propTypes = {
-  btnAxn: PropTypes.func.isRequired,
+  btnAxn: PropTypes.func,
+  close: PropTypes.bool,
   state: PropTypes.bool,
-  price: PropTypes.number.isRequired,
-  user: PropTypes.number.isRequired,
-  vehicle: PropTypes.number.isRequired,
+  price: PropTypes.number,
+  vehicle: PropTypes.number,
 };
 
 Booking.defaultProps = {
+  btnAxn: null,
+  close: true,
+  price: 0,
   state: false,
+  vehicle: null,
 };
 
 export default Booking;

@@ -20,8 +20,10 @@
 
     a {
       background-color: $color-white;
+      border-right: 1px solid $color-silver;
       color: $color-dark;
       display: block;
+      margin-right: -2px;
       padding: $padding * 1.25;
       padding-bottom: $padding * 0.9;
       text-decoration: none;
@@ -29,6 +31,7 @@
 
       &:hover {
         background-color: $color-silver;
+        border-right: 1px solid $color-silver;
         text-decoration: none;
         transition: $transition;
       }
@@ -37,6 +40,7 @@
     .active,
     .active:hover {
       background-color: $color-primary;
+      border-right: 1px solid $color-primary;
       color: $color-white;
     }
   }

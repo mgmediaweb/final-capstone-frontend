@@ -62,7 +62,6 @@ const DetailScreen = () => {
 
       <BackButton />
       <Booking
-        user={1}
         vehicle={vehicleId}
         price={580}
         state={bookVisible}
