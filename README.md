@@ -13,6 +13,7 @@
 ### Install
 
 To view this document on your local computer:
+
 - Clone this repository.
 - Install dependencies (npm install).
 - Run Webpack Bundle (npm run start).
@@ -47,6 +48,11 @@ To view this document on your local computer:
 - Twitter: [@elsonotake](https://twitter.com/elsonotake)
 - LinkedIn: [elsonotake](https://linkedin.com/in/elsonotake)
 
+## 👤 **Marco Antonio Hincapié Montes**
+
+- GitHub: [@AntonioHincapie](https://github.com/AntonioHincapie)
+- Twitter: [@MarcoHincapie](https://twitter.com/MarcoHincapie)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/antoniohincapie/)
 
 ## 🤝 Contributing
 
