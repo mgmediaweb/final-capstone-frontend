@@ -1,11 +1,14 @@
 /* eslint-disable import/no-named-as-default */
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import BackButton from '../components/backbutton/BackButton';
 import Booking from '../components/booking/Booking';
 import Button from '../components/button/Button';
 import Slider from '../components/slider/Slider';
 
 const DetailScreen = () => {
+  const { id: vehicleId } = useParams();
+
   const gallery = ['model3a.jpg', 'model3b.jpg', 'model3c.jpg', 'model3d.jpg'];
   const [background, setBackground] = useState(gallery[0]);
   const [bookVisible, setBookVisible] = useState(false);
@@ -55,7 +58,7 @@ const DetailScreen = () => {
       <BackButton />
       <Booking
         user={1}
-        vehicle={1}
+        vehicle={vehicleId}
         price={580}
         state={bookVisible}
         btnAxn={showBooking}
