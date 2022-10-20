@@ -1,4 +1,4 @@
-@import "../../config";
+@import "../../config.scss";
 
 .navbar {
   display: none;
@@ -34,14 +34,15 @@
       }
     }
 
-    .active, .active:hover {
+    .active,
+    .active:hover {
       background-color: $color-primary;
-      color: $color-white; 
-    }  
+      color: $color-white;
+    }
   }
 
   .img-container {
-    background:  url(../../assets/images/logo.png) no-repeat;
+    background: url(../../assets/images/logo.png) no-repeat;
     background-position: center center;
     background-size: auto 35%;
     align-items: center;
@@ -56,7 +57,7 @@
       opacity: 0.5;
       transition: $transition;
     }
-  }  
+  }
 
   .navbar {
     background-color: $color-white;
@@ -84,7 +85,7 @@
     width: 100%;
 
     ul li {
-      display: inline-block;  
+      display: inline-block;
       margin: 0 $padding/2;
     }
 

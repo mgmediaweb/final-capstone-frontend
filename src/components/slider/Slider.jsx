@@ -6,15 +6,13 @@ import './Slider.scss';
 const Slider = (props) => {
   const { data, btnAxn } = props;
 
-  const axn = (value) => btnAxn(value);
-
   return (
     <div className="slider">
       {
         data.map((photo) => (
           <div
             key={photo}
-            onClick={() => axn(photo)}
+            onClick={() => btnAxn(photo)}
             style={{ backgroundImage: `url(/assets/vehicles/${photo})` }}
           />
         ))

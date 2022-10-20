@@ -17,13 +17,11 @@ const Button = (props) => {
     value,
   } = props;
 
-  const axn = (value) => btnAxn(value);
-
   return (
     <button
       type="button"
       className={`${size} color-${color}`}
-      onClick={() => axn(value)}
+      onClick={() => btnAxn(value)}
     >
       {iconStart === 'calendar' && <FaCalendarAlt className="icon icon-start" />}
       {label}

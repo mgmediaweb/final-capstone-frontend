@@ -7,6 +7,11 @@ import { FaTimes } from 'react-icons/fa';
 import './Booking.scss';
 import Button from '../button/Button';
 
+const createDate = (dateStr) => {
+  const dateArr = dateStr.split('-');
+  return new Date(dateArr[0], parseInt(dateArr[1], 10) - 1, parseInt(dateArr[2], 10));
+};
+
 const Slider = (props) => {
   const {
     btnAxn,
@@ -19,22 +24,37 @@ const Slider = (props) => {
   const dateStart = useRef();
   const dateEnd = useRef();
 
-  const [days, setDays] = useState(0);
-  const [cost, setCost] = useState(0);
-
-  const axn = (value) => btnAxn(value);
+  const [days, setDays] = useState('---');
+  const [cost, setCost] = useState('---');
 
   const calcDays = () => {
-    if ((dateStart.current.value !== '') && (dateEnd.current.value !== '')) {
-      setDays(5);
-      setCost(price);
+    const dateStartVal = dateStart.current.value;
+    const dateEndVal = dateEnd.current.value;
+
+    if ((dateStartVal !== '') && (dateEndVal !== '')) {
+      const oneDay = 24 * 60 * 60 * 1000;
+
+      const options = { style: 'currency', currency: 'USD' };
+      const numberFormat = new Intl.NumberFormat('en-US', options);
+
+      const diffDays = Math.round((createDate(dateEndVal) - createDate(dateStartVal)) / oneDay) + 1;
+      const rentCost = diffDays * price;
+
+      if (rentCost > 0) {
+        setDays(diffDays);
+        setCost(numberFormat.format(rentCost));
+      } else {
+        setDays('---');
+        setCost('---');
+      }
     } else {
-      setDays(0);
-      setCost(0);
+      setDays('---');
+      setCost('---');
     }
   };
 
   const sendForm = () => {
+    /* put some validation here */
     document.getElementById('bookingForm').submit();
   };
 
@@ -42,7 +62,7 @@ const Slider = (props) => {
     <div className={state ? 'booking book-show' : 'booking book-hide'}>
       <div
         className="closeBtn"
-        onClick={() => axn(!state)}
+        onClick={() => btnAxn(!state)}
       >
         <FaTimes className="icon" />
       </div>
@@ -98,7 +118,7 @@ const Slider = (props) => {
             </div>
             <div>
               <span>Cost</span>
-              <h2>{`$ ${cost}`}</h2>
+              <h2>{cost}</h2>
             </div>
           </div>
 

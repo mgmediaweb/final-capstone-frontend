@@ -10,14 +10,8 @@ const DetailScreen = () => {
   const [background, setBackground] = useState(gallery[0]);
   const [bookVisible, setBookVisible] = useState(false);
 
-  const showBooking = () => {
-    setBookVisible(!bookVisible);
-  };
-
-  const changeBG = (newbg) => {
-    console.log('new bg', newbg);
-    setBackground(newbg);
-  };
+  const showBooking = () => setBookVisible(!bookVisible);
+  const changeBG = (newbg) => setBackground(newbg);
 
   return (
     <div className="container" style={{ backgroundImage: `url(/assets/vehicles/${background})` }}>

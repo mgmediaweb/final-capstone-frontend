@@ -16,7 +16,7 @@ button {
   &:hover {
     cursor: pointer;
     transition: $transition;
-  }  
+  }
 
   .icon {
     font-size: 1.25em;
@@ -26,8 +26,8 @@ button {
     }
 
     &-start {
-      margin: 0 $padding * 1.5 0 $padding * -0.5;      
-    }    
+      margin: 0 $padding * 1.5 0 $padding * -0.5;
+    }
   }
 }
 
@@ -45,8 +45,8 @@ button {
 
     &:hover {
       background-color: darken($color-dark, 10);
-    }    
-  }  
+    }
+  }
 }
 
 .main {

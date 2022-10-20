@@ -3,7 +3,7 @@
 .slider {
   bottom: 5vh;
   display: flex;
-  justify-content: center;  
+  justify-content: center;
   left: 0;
   position: fixed;
   width: 100%;
@@ -24,7 +24,6 @@
     &:hover {
       border-color: $color-primary;
       cursor: pointer;
-      
       transition: $transition;
     }
   }
