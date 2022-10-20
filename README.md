@@ -35,6 +35,12 @@ To view this document on your local computer:
 - Twitter: [@GonzoMedinaDev](https://twitter.com/GonzoMedinaDev)
 - LinkedIn: [gonzalo-medina-g](https://www.linkedin.com/in/gonzalo-medina-g/)
 
+👤 **Giuseppe Tomasini**
+
+- GitHub: [@GiuseppeTG](https://github.com/GiuseppeTG)
+- Twitter: [@giusetomasini](https://twitter.com/giusetomasini)
+- LinkedIn: [Giuseppe Tomasini](https://www.linkedin.com/in/giuseppe-tomasini-g/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
