@@ -1,0 +1,58 @@
+@import "../../config.scss";
+
+button {
+  align-items: center;
+  background-color: $color-silver;
+  border: none;
+  border-radius: 50px;
+  color: $color-white;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: $padding * 0.75;
+  transition: $transition;
+  user-select: none;
+
+  &:hover {
+    cursor: pointer;
+    transition: $transition;
+  }
+
+  .icon {
+    font-size: 1.25em;
+
+    &-end {
+      margin: 0 $padding * -1 0 $padding * 1.5;
+    }
+
+    &-start {
+      margin: 0 $padding * 1.5 0 $padding * -0.5;
+    }
+  }
+}
+
+.color {
+  &-primary {
+    background-color: $color-primary;
+
+    &:hover {
+      background-color: darken($color-primary, 10);
+    }
+  }
+
+  &-dark {
+    background-color: $color-dark;
+
+    &:hover {
+      background-color: darken($color-dark, 10);
+    }
+  }
+}
+
+.main {
+  padding: $padding*1.5 $padding * 2;
+}
+
+.normal {
+  padding: $padding $padding * 1.5;
+}
