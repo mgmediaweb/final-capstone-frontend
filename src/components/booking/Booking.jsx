@@ -12,7 +12,7 @@ const createDate = (dateStr) => {
   return new Date(dateArr[0], parseInt(dateArr[1], 10) - 1, parseInt(dateArr[2], 10));
 };
 
-const Slider = (props) => {
+const Booking = (props) => {
   const {
     btnAxn,
     price,
@@ -152,7 +152,7 @@ const Slider = (props) => {
   );
 };
 
-Slider.propTypes = {
+Booking.propTypes = {
   btnAxn: PropTypes.func.isRequired,
   state: PropTypes.bool,
   price: PropTypes.number.isRequired,
@@ -160,8 +160,8 @@ Slider.propTypes = {
   vehicle: PropTypes.number.isRequired,
 };
 
-Slider.defaultProps = {
+Booking.defaultProps = {
   state: false,
 };
 
-export default Slider;
+export default Booking;

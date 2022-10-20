@@ -1,3 +1,4 @@
+/* eslint-disable no-script-url */
 import { NavLink, Link } from 'react-router-dom';
 import {
   FaFacebookF,
@@ -20,18 +21,23 @@ const Navbar = () => (
             </NavLink>
           </li>
           <li>
-            <NavLink to="/lifestyle">
-              LIFESTYLE
+            <NavLink to="/reservation">
+              MY RESERVATIONS
             </NavLink>
           </li>
           <li>
-            <NavLink to="/shop">
-              SHOP
+            <NavLink to="/booking">
+              BOOKING
             </NavLink>
           </li>
           <li>
-            <NavLink to="/testdrive">
-              TEST DRIVE
+            <NavLink to="/about">
+              ABOUT
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/admin">
+              ADMIN CARS
             </NavLink>
           </li>
         </ul>

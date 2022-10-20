@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import PropTypes from 'prop-types';
-import './Slider.scss';
+import './Gallery.scss';
 
-const Slider = (props) => {
+const Gallery = (props) => {
   const { data, btnAxn } = props;
 
   return (
@@ -21,9 +21,9 @@ const Slider = (props) => {
   );
 };
 
-Slider.propTypes = {
+Gallery.propTypes = {
   btnAxn: PropTypes.func.isRequired,
   data: PropTypes.array.isRequired,
 };
 
-export default Slider;
+export default Gallery;
