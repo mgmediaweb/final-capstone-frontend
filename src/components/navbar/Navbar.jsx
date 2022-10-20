@@ -22,7 +22,7 @@ const Navbar = () => (
           </li>
           <li>
             <NavLink to="/reservation">
-              MY RESERVATIONS
+              RESERVATIONS
             </NavLink>
           </li>
           <li>
@@ -37,7 +37,7 @@ const Navbar = () => (
           </li>
           <li>
             <NavLink to="/admin">
-              ADMIN CARS
+              ADMIN
             </NavLink>
           </li>
         </ul>
