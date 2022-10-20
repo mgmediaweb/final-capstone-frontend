@@ -1,0 +1,42 @@
+@import "../../config.scss";
+
+.slider {
+  bottom: 5vh;
+  display: flex;
+  justify-content: center;  
+  left: 0;
+  position: fixed;
+  width: 100%;
+
+  div {
+    background-image: url('../../assets/images/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border: 3px solid $color-white;
+    border-radius: $rounded;
+    display: inline-block;
+    height: 60px;
+    margin: 0 $padding/2;
+    transition: $transition;
+    width: 80px;
+
+    &:hover {
+      border-color: $color-primary;
+      cursor: pointer;
+      
+      transition: $transition;
+    }
+  }
+}
+
+// #######################################################################################
+// ################################### TABLET & DESKTOP ##################################
+// #######################################################################################
+
+@media (min-width: $breakpoint-tablet) {
+  .slider {
+    left: $navbar-size;
+    width: calc(100% - $navbar-size);
+  }
+}

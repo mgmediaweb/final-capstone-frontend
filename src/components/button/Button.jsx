@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
 import {
-  FaCalendarAlt,
   FaArrowCircleRight,
+  FaCalendarAlt,
+  FaCheck,
 } from 'react-icons/fa';
 import './Button.scss';
 
 const Button = (props) => {
   const {
     btnAxn,
+    color,
     iconStart,
     iconEnd,
     label,
@@ -20,18 +22,20 @@ const Button = (props) => {
   return (
     <button
       type="button"
-      className={size}
+      className={`${size} color-${color}`}
       onClick={() => axn(value)}
     >
       {iconStart === 'calendar' && <FaCalendarAlt className="icon icon-start" />}
       {label}
       {iconEnd === 'arrow' && <FaArrowCircleRight className="icon icon-end" />}
+      {iconEnd === 'check' && <FaCheck className="icon icon-end" />}
     </button>
   );
 };
 
 Button.propTypes = {
   btnAxn: PropTypes.func.isRequired,
+  color: PropTypes.string,
   iconStart: PropTypes.string,
   iconEnd: PropTypes.string,
   label: PropTypes.string.isRequired,
@@ -40,6 +44,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
+  color: 'primary',
   iconStart: null,
   iconEnd: null,
   size: 'normal',

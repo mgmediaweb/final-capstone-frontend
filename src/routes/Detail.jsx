@@ -1,18 +1,26 @@
 /* eslint-disable import/no-named-as-default */
 import React, { useState } from 'react';
+import BackButton from '../components/backbutton/BackButton';
+import Booking from '../components/booking/Booking';
 import Button from '../components/button/Button';
+import Slider from '../components/slider/Slider';
 
 const DetailScreen = () => {
-  const [background, setBackground] = useState(1);
+  const gallery = ['model3a.jpg', 'model3b.jpg', 'model3c.jpg', 'model3d.jpg'];
+  const [background, setBackground] = useState(gallery[0]);
+  const [bookVisible, setBookVisible] = useState(false);
 
-  const btnAxn = () => {
-    let newbg = background + 1;
-    if (newbg > 4) newbg = 1;
+  const showBooking = () => {
+    setBookVisible(!bookVisible);
+  };
+
+  const changeBG = (newbg) => {
+    console.log('new bg', newbg);
     setBackground(newbg);
   };
 
   return (
-    <div className="container" style={{ backgroundImage: `url(/assets/vehicles/model${background}a.jpg)` }}>
+    <div className="container" style={{ backgroundImage: `url(/assets/vehicles/${background})` }}>
       <div className="whiteCortain">
         <div className="detailBox">
           <h2>Lamborghini</h2>
@@ -40,7 +48,7 @@ const DetailScreen = () => {
           </table>
 
           <Button
-            btnAxn={btnAxn}
+            btnAxn={showBooking}
             iconStart="calendar"
             iconEnd="arrow"
             label="Booking"
@@ -48,6 +56,16 @@ const DetailScreen = () => {
           />
         </div>
       </div>
+
+      <Slider data={gallery} btnAxn={changeBG} />
+      <BackButton />
+      <Booking
+        user={1}
+        vehicle={1}
+        price={580}
+        state={bookVisible}
+        btnAxn={showBooking}
+      />
     </div>
   );
 };

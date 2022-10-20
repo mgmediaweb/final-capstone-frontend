@@ -16,6 +16,10 @@ h1 {
   color: tomato;
 }
 
+.add-padding-below {
+  margin-bottom: $padding;
+}
+
 .container {
   background-image: url('./assets/images/bg.jpg');
   background-repeat: no-repeat;
@@ -25,6 +29,7 @@ h1 {
   width: 100%;
   margin: 0;
   padding: $padding;
+  position: relative;
 }
 
 .detailBox {
@@ -67,6 +72,22 @@ h1 {
     tr:nth-child(even) {
       background-color: $color-silver;
     }
+  }
+}
+
+.form {
+  &-bottom-bar {
+    display: flex;
+    justify-content: center;
+    margin-top: $padding*3;
+  }
+
+  &-field {
+    border: none;
+    border-radius: $rounded;
+    font-size: 1.1rem;
+    padding: $padding $padding*0.75;
+    width: 100%;
   }
 }
 
