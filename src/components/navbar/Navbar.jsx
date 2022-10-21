@@ -1,4 +1,5 @@
 /* eslint-disable no-script-url */
+/* eslint linebreak-style: ["error", "windows"] */
 import { NavLink, Link } from 'react-router-dom';
 import {
   FaFacebookF,

@@ -1,4 +1,5 @@
 /* eslint-disable import/no-named-as-default */
+/* eslint linebreak-style: ["error", "windows"] */
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import BackButton from '../components/backbutton/BackButton';

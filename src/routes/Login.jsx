@@ -1,3 +1,4 @@
+/* eslint linebreak-style: ["error", "windows"] */
 import { Link } from 'react-router-dom';
 
 const LoginScreen = () => {

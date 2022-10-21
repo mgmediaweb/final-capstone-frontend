@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint linebreak-style: ["error", "windows"] */
 import PropTypes from 'prop-types';
 import './Gallery.scss';
 
