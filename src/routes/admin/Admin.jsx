@@ -1,6 +1,6 @@
 /* eslint linebreak-style: ["error", "windows"] */
 import { Link, useNavigate } from 'react-router-dom';
-import Button from '../components/button/Button';
+import Button from '../../components/button/Button';
 
 const AdminScreen = () => {
   const navigate = useNavigate();
@@ -54,10 +54,10 @@ const AdminScreen = () => {
                   <td>{car.model}</td>
                   <td className="text-center">{car.year}</td>
                   <td className="text-center">
-                    <Link to={`/detail/${car.id}`} className="add-padding-horizontal">
+                    <Link to={`/admin/edit/${car.id}`} className="add-padding-horizontal">
                       Edit
                     </Link>
-                    <Link to={`/detail/${car.id}`} className="add-padding-horizontal">
+                    <Link to={`/admin/edit/${car.id}`} className="add-padding-horizontal">
                       Delete
                     </Link>
                   </td>
