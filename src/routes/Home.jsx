@@ -1,13 +1,24 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
+import { React, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import carsData from '../mockData/carsData';
 import './Home.scss';
 import CarCard from '../components/carCard/CarCard';
+import { getVehicles } from '../redux/vehicles/vehicles';
 
 function Home() {
+  const dispatch = useDispatch();
+  const vehicles = useSelector((state) => state.vehicles);
+
+  console.log(vehicles);
+
+  useEffect(() => {
+    dispatch(getVehicles());
+  }, []);
+
   const settings = {
     className: 'center',
     infinite: true,
