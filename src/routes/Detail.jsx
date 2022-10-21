@@ -33,7 +33,7 @@ const DetailScreen = () => {
             a. Orci varius natoque penatibus et magnis dis parturient montes.
           </p>
 
-          <table>
+          <table className="detail-table">
             <tbody>
               <tr>
                 <td>Power (CV)</td>
