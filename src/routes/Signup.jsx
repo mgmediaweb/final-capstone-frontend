@@ -47,7 +47,7 @@ function Signup() {
 
         <p className="signin-message">
           Already have an account?
-          <Link to="/signup">
+          <Link to="/login">
             LOGIN
           </Link>
         </p>
