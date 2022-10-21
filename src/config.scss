@@ -19,3 +19,11 @@ $padding: 10px;
 $rounded: 4px;
 $transition: 0.5s;
 $spacer: $padding*3;
+
+//Mixins
+@mixin flex-center($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
