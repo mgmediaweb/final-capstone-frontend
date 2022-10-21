@@ -1,25 +1,28 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Gallery from '../components/gallery/Gallery';
+// import CarCard from '../components/carCard/CarCard';
+import carsData from '../mockData/carsData';
+import './Home.scss';
+import CarCard from '../components/carCard/CarCard';
 
 function Home() {
-  const gallery = ['model3a.jpg', 'model3b.jpg', 'model3c.jpg', 'model3d.jpg'];
-
   const settings = {
-    dots: true,
+    className: 'center',
     infinite: true,
+    dots: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
       {
-        breakpoint: 760,
+        breakpoint: 870,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          initialSlide: 0,
         },
       },
     ],
@@ -27,23 +30,31 @@ function Home() {
 
   return (
     <div className="container">
-      <header>
-        <h1>LATEST MODELS</h1>
-        <p>Please select a car</p>
-        <span className="division-span">____________</span>
-      </header>
-      <ul className="slider">
-        <Slider {...settings}>
-          {
-            gallery.map((car, index) => (
+      <div className="home-container">
+        <header className="cars-header">
+          <h1>LATEST MODELS</h1>
+          <p>Please select a car</p>
+          <hr className="division-span" />
+        </header>
+        <div className="cars-container">
+          <ul className="car-slider">
+            <Slider {...settings}>
+              {
+            carsData.carsData.map((car, index) => (
               <CarCard
-                key={car}
+                key={car.id}
                 index={index}
+                name={car.name}
+                description={car.description}
+                image={car.image}
+                id={car.id}
               />
             ))
           }
-        </Slider>
-      </ul>
+            </Slider>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
