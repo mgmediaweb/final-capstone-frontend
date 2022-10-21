@@ -51,10 +51,10 @@ const AdminScreen = () => {
                   <td>{car.model}</td>
                   <td className="text-center">{car.year}</td>
                   <td className="text-center">
-                    <Link to={`/detail/${car.id}`}>
+                    <Link to={`/detail/${car.id}`} className="add-padding-horizontal">
                       Edit
                     </Link>
-                    <Link to={`/detail/${car.id}`}>
+                    <Link to={`/detail/${car.id}`} className="add-padding-horizontal">
                       Delete
                     </Link>
                   </td>

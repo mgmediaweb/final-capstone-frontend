@@ -29,6 +29,10 @@ h1 {
   margin-bottom: $padding;
 }
 
+.add-padding-horizontal {
+  margin: 0 $padding;
+}
+
 .container {
   background-image: url('./assets/images/bg.jpg');
   background-repeat: no-repeat;
@@ -65,22 +69,22 @@ h1 {
     line-height: 1.1em;
     text-align: end;
   }
+}
 
-  table {
-    background-color: rgba($color-white, 0.5);
-    border-collapse: collapse;
-    border: none;
-    font-size: 1.1rem;
-    margin: $padding 0 $padding*2 0;
-    padding: 0;
+.detail-table {
+  background-color: rgba($color-white, 0.5);
+  border-collapse: collapse;
+  border: none;
+  font-size: 1.1rem;
+  margin: $padding 0 $padding*2 0;
+  padding: 0;
 
-    td {
-      padding: calc($padding/2) $padding;
-    }
+  td {
+    padding: calc($padding/2) $padding;
+  }
 
-    tr:nth-child(even) {
-      background-color: $color-silver;
-    }
+  tr:nth-child(even) {
+    background-color: $color-silver;
   }
 }
 
@@ -110,6 +114,11 @@ h1 {
   width: 90%;
 }
 
+.no-margin-padding {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 .page {
   &-admin {
     padding: $padding*5 0;
@@ -126,7 +135,7 @@ h1 {
     p {
       font-size: 1rem;
       padding-bottom: $padding * 2;
-    }    
+    }
   }
 
   &-booking {
@@ -150,6 +159,11 @@ h1 {
   &-reservation {
     padding: $padding*5 0;
 
+    p {
+      font-size: 1rem;
+      padding-bottom: $padding * 2;
+    }
+
     article {
       border: solid 1px $color-silver;
       display: flex;
@@ -157,8 +171,7 @@ h1 {
       justify-content: space-between;
       margin-bottom: $padding * 2;
       padding: $padding;
-
-      box-shadow: 0px 5px 5px 0px rgba($color-dark, 0.15);      
+      box-shadow: 0 5px 5px 0 rgba($color-dark, 0.15);
       transition: $transition;
 
       h2 {
@@ -173,7 +186,7 @@ h1 {
         font-size: 1rem;
         font-weight: 400;
         margin: 0;
-        padding: 0;        
+        padding: 0;
       }
 
       p {
@@ -182,7 +195,7 @@ h1 {
       }
 
       &:hover {
-        box-shadow: 0px 5px 15px 0px rgba($color-dark, 0.25);
+        box-shadow: 0 5px 15px 0 rgba($color-dark, 0.25);
         transition: $transition;
       }
 
@@ -221,29 +234,19 @@ h1 {
         background-image: url('./assets/images/bg.jpg');
         background-repeat: no-repeat;
         background-position: center center;
-        background-size: cover;        
+        background-size: cover;
         height: 70px;
         margin-right: $padding;
-        width:  70px;
+        width: 70px;
       }
     }
-
-    p {
-      font-size: 1rem;
-      padding-bottom: $padding * 2;
-    }    
-  }  
+  }
 }
 
 .stores {
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
-
-  p {
-    margin: 0;
-    padding: 0;
-  }
 
   a {
     background-color: $color-primary;
@@ -263,10 +266,6 @@ h1 {
   width: 100%;
   border-collapse: collapse;
 
-  a {
-    margin: 0 $padding/2;
-  }
-
   td {
     border: 1px solid $color-silver;
     padding: $padding/2;
@@ -276,7 +275,7 @@ h1 {
     background-color: $color-silver;
     border: 1px solid $color-silver;
     padding: $padding/2;
-  }  
+  }
 }
 
 .text {

@@ -52,8 +52,8 @@ const AboutScreen = () => {
           {
             location.map((item) => (
               <div key={item.city}>
-                <p><strong>{`${item.city} (${item.country})`}</strong></p>
-                <p><small>{item.address}</small></p>
+                <p className="no-margin-padding"><strong>{`${item.city} (${item.country})`}</strong></p>
+                <p className="no-margin-padding"><small>{item.address}</small></p>
                 <p><a href={`tel:${item.phone}`}>{item.phone}</a></p>
               </div>
             ))
