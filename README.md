@@ -48,7 +48,7 @@ To view this document on your local computer:
 - Twitter: [@elsonotake](https://twitter.com/elsonotake)
 - LinkedIn: [elsonotake](https://linkedin.com/in/elsonotake)
 
-## 👤 **Marco Antonio Hincapié Montes**
+👤 **Marco Antonio Hincapié Montes**
 
 - GitHub: [@AntonioHincapie](https://github.com/AntonioHincapie)
 - Twitter: [@MarcoHincapie](https://twitter.com/MarcoHincapie)
