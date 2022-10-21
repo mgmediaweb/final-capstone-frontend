@@ -74,7 +74,7 @@ const Booking = (props) => {
         <form id="bookingForm" action="#" method="get">
           <input type="hidden" name="user" value={user} />
 
-          <div className="add-padding-below">
+          <div className="add-margin-below">
             <label htmlFor="vehicle">Vehicle</label>
             <select
               name="vehicle"
@@ -90,7 +90,7 @@ const Booking = (props) => {
             </select>
           </div>
 
-          <div className="add-padding-below">
+          <div className="add-margin-below">
             <label htmlFor="date-start">Start Date</label>
             <input
               type="date"
@@ -104,8 +104,8 @@ const Booking = (props) => {
             />
           </div>
 
-          <div className="add-padding-below">
-            <label htmlFor="date-end">Start end</label>
+          <div className="add-margin-below">
+            <label htmlFor="date-end">End Date</label>
             <input
               type="date"
               ref={dateEnd}
@@ -118,7 +118,7 @@ const Booking = (props) => {
             />
           </div>
 
-          <div className="add-padding-below">
+          <div className="add-margin-below">
             <label htmlFor="city">City</label>
             <select name="city" className="form-field" required>
               <option value="">Select one</option>
@@ -138,6 +138,22 @@ const Booking = (props) => {
               <span>Cost</span>
               <h2>{cost}</h2>
             </div>
+          </div>
+
+          <div className="add-margin-below">
+            <label htmlFor="vehicle">Vehicle</label>
+            <select
+              name="vehicle"
+              className="form-field"
+              defaultValue={vehicle || ''}
+              required
+            >
+              <option value="">Select one</option>
+              <option value="1">Ferrari Testarossa - 1996</option>
+              <option value="2">Iso Automovil Isseta - 1956</option>
+              <option value="3">Tesla Model 3 - 2021</option>
+              <option value="4">Roll Royce Gost - 2022</option>
+            </select>
           </div>
 
           <div className="form-bottom-bar">

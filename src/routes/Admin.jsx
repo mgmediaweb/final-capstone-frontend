@@ -1,8 +1,10 @@
 /* eslint linebreak-style: ["error", "windows"] */
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Button from '../components/button/Button';
 
 const AdminScreen = () => {
+  const navigate = useNavigate();
+
   const vehicles = [
     {
       id: 1,
@@ -21,7 +23,7 @@ const AdminScreen = () => {
   ];
 
   const addVehicle = () => {
-    console.log('add vehicle');
+    navigate('/admin/new', { replace: true }, [navigate]);
   };
 
   return (

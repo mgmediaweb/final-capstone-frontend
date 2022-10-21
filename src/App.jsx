@@ -6,9 +6,11 @@ import {
 } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import AboutScreen from './routes/About';
+import AdminScreen from './routes/Admin';
 import BookingScreen from './routes/Booking';
 import DetailScreen from './routes/Detail';
 import HomeScreen from './routes/Home';
+import NewScreen from './routes/New';
 import ReservationScreen from './routes/Reservation';
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
+        <Route element={<NewScreen />} path="/admin/new" />
+        <Route element={<AdminScreen />} path="/admin" />
         <Route element={<AboutScreen />} path="/about" />
         <Route element={<BookingScreen />} path="/booking" />
         <Route element={<DetailScreen />} path="/detail/:id" />
