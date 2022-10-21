@@ -1,3 +1,4 @@
+/* eslint linebreak-style: ["error", "windows"] */
 import React from 'react';
 import './CarCard.scss';
 import PropTypes from 'prop-types';

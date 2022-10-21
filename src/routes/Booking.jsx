@@ -1,3 +1,4 @@
+/* eslint linebreak-style: ["error", "windows"] */
 import React, { useState } from 'react';
 import Button from '../components/button/Button';
 import Booking from '../components/booking/Booking';

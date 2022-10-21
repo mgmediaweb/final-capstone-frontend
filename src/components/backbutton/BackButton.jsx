@@ -1,3 +1,4 @@
+/* eslint linebreak-style: ["error", "windows"] */
 import { FaArrowLeft } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import './BackButton.scss';

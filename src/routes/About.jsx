@@ -1,3 +1,4 @@
+/* eslint linebreak-style: ["error", "windows"] */
 const AboutScreen = () => {
   const location = [
     {

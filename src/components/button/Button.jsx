@@ -1,3 +1,4 @@
+/* eslint linebreak-style: ["error", "windows"] */
 import PropTypes from 'prop-types';
 import {
   FaArrowCircleRight,

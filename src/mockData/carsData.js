@@ -1,3 +1,4 @@
+/* eslint linebreak-style: ["error", "windows"] */
 const carsData = [
   {
     id: 1,
