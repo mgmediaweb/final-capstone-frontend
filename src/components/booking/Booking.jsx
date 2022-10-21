@@ -26,6 +26,7 @@ const Booking = (props) => {
 
   const dateStart = useRef();
   const dateEnd = useRef();
+  const form = useRef();
 
   const [days, setDays] = useState('---');
   const [cost, setCost] = useState('---');
@@ -58,7 +59,7 @@ const Booking = (props) => {
 
   const sendForm = () => {
     /* PUT SOME VALIDATION HERE */
-    document.getElementById('bookingForm').submit();
+    form.current.submit();
   };
 
   return (
@@ -71,7 +72,7 @@ const Booking = (props) => {
       </div>
       <h2>BOOKING</h2>
       <div className="centerForm">
-        <form id="bookingForm" action="#" method="get">
+        <form ref={form} action="#" method="post">
           <input type="hidden" name="user" value={user} />
 
           <div className="add-margin-below">

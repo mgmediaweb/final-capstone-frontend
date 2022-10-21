@@ -18,17 +18,19 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route element={<NewScreen />} path="/admin/new" />
         <Route element={<AdminScreen />} path="/admin" />
+        <Route element={<NewScreen />} path="/admin/new" />
         <Route element={<AboutScreen />} path="/about" />
         <Route element={<BookingScreen />} path="/booking" />
         <Route element={<DetailScreen />} path="/detail/:id" />
         <Route element={<ReservationScreen />} path="/reservation" />
-        <Route index element={<HomeScreen />} />
+        <Route element={<HomeScreen />} index exact />
         <Route
-          element={
-            <section className="flex-center"><div className="container text-center">404 Page not found</div></section>
-          }
+          element={(
+            <section className="flex-center">
+              <div className="container text-center">404 Page not found</div>
+            </section>
+          )}
           path="*"
         />
       </Routes>

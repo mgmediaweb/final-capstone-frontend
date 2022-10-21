@@ -103,6 +103,20 @@ h1 {
   }
 }
 
+.grid {
+  &-simple {
+    width: 100%;
+  }
+
+  &-double {
+    width: 100%;
+  }
+
+  &-triple {
+    width: 100%;
+  }
+}
+
 .hide {
   display: none;
 }
@@ -293,7 +307,6 @@ h1 {
 
 .w {
   &-100 {
-    background-color: aqua;
     width: 100%;
   }
 }
@@ -331,6 +344,30 @@ h1 {
 
   .detailBox {
     width: 75%;
+  }
+
+  .grid {
+    &-display {
+      display: grid;
+      gap: $padding;
+    }
+
+    &-flex {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-simple {
+      grid-template-columns: 1fr;
+    }
+  
+    &-double {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    &-triple {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
 
   .page-reservation {
