@@ -10,7 +10,7 @@ function CarCard({
   return (
     <li className="car-card">
       <div className="card-container">
-        <Link to={`/detail/${id}`}>
+        <Link to={`/models/${id}`}>
           <img src={image} alt="car" className="car-card-image" />
         </Link>
         <h2>{brand}</h2>
