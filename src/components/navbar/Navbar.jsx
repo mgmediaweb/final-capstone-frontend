@@ -42,7 +42,7 @@ const Navbar = () => {
           <nav>
             <ul>
               <li>
-                <NavLink to="/" onClick={() => setNavVisible(false)}>
+                <NavLink to="/" end onClick={() => setNavVisible(false)}>
                   MODELS
                 </NavLink>
               </li>

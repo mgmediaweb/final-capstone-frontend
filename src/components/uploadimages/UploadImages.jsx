@@ -9,6 +9,8 @@ import {
   FaCheck,
   FaTimes,
 } from 'react-icons/fa';
+import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import storage from '../../Firebase';
 import './UploadImages.scss';
 import Button from '../button/Button';
 
@@ -29,40 +31,40 @@ const UploadImages = (props) => {
 
   const closePanel = () => {
     btnAxn(!state);
-    setTimeout(() => {
-      setStatus('form');
-    }, 1000);
+    setTimeout(() => setStatus('form'), 1000);
   };
 
   const goBack = () => setStatus('form');
 
-  const sendForm = async () => {
-    setStatus('waiting');
-
-    /* PUT SOME VALIDATION HERE */
-
-    // const fb = new FormData();
-    // fb.append('image', gallery, gallery.name);
-
-    console.log(gallery);
-
-    const fb = {
-      photo: 'https://www.wsupercars.com/wallpapers-regular/Lotus/2022-Lotus-Evija-Fittipaldi-Edition-001-1080.jpg',
-    };
-
+  const apiConnection = async (photoToPublish) => {
+    const body = { photo: photoToPublish };
     const url = `https://elsonotake-backend.herokuapp.com/api/v1/vehicles/${vehicle.id}/galleries`;
 
     const response = await fetch(url, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
-        'Content-Type': 'application/json',
       },
-      body: JSON.stringify(fb),
+      body: JSON.stringify(body),
     });
 
     if (response.status === 200) setStatus('success');
     else setStatus('error');
+  };
+
+  const sendForm = () => {
+    if (gallery === null) {
+      setStatus('error');
+      return;
+    }
+
+    setStatus('waiting');
+    const rnd = Math.round(Math.random() * (999 - 100) + 100);
+    const imageRef = ref(storage, `image${vehicle.id}_${rnd}`);
+
+    uploadBytes(imageRef, gallery)
+      .then((snapshot) => getDownloadURL(snapshot.ref))
+      .then((downloadURL) => apiConnection(downloadURL));
   };
 
   const ScreenError = () => (
@@ -99,12 +101,12 @@ const UploadImages = (props) => {
       <div ref={screen} className="centerForm">
         { status === 'form'
           && (
-          <form ref={form} action="#" method="post">
+          <form ref={form} action="#" method="post" encType="multipart/form-data">
             <h3 className="text-center">{vehicle.model}</h3>
             <br />
 
             <div className="add-margin-below">
-              <label htmlFor="image">Imagen</label>
+              <label htmlFor="image">Search on your computer</label>
               <input
                 type="file"
                 id="image"
