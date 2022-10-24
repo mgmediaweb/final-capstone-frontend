@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint linebreak-style: ["error", "windows"] */
 import PropTypes from 'prop-types';
 
 const Form = (props) => {
