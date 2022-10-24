@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import carsData from '../mockData/carsData';
 import './Home.scss';
 import CarCard from '../components/carCard/CarCard';
 import { getVehicles } from '../redux/vehicles/vehicles';
@@ -52,13 +51,14 @@ function Home() {
           <ul className="car-slider">
             <Slider {...settings}>
               {
-            carsData.carsData.map((car, index) => (
+            vehicles.map((car, index) => (
               <CarCard
                 key={car.id}
                 index={index}
-                name={car.name}
+                brand={car.brand}
+                model={car.model}
                 description={car.description}
-                image={car.image}
+                image={car.galleries[0].photo}
                 id={car.id}
               />
             ))
