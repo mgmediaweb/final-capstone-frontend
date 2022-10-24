@@ -233,7 +233,7 @@ h1 {
     background-size: 100% auto;
     display: flex;
     justify-content: center;
-    padding: $padding*5 0;
+    padding: $padding*6 0;
 
     p {
       font-size: 1rem;
@@ -248,7 +248,7 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: $padding * 3 $padding;
+    padding: $padding*6 $padding;
 
     p {
       color: $color-white;
@@ -260,7 +260,7 @@ h1 {
   }
 
   &-reservation {
-    padding: $padding*5 0;
+    padding: $padding*6 0;
 
     p {
       font-size: 1rem;
