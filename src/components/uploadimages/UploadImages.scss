@@ -1,15 +1,15 @@
 @import "../../config.scss";
 
-.booking {
+.panel {
   background-color: $color-primary;
   box-shadow: 0 0 15px 0 rgba($color-dark, 0.33);
   color: $color-white;
   height: 100vh;
+  flex: 1;
   max-width: $booking-size;
   width: 100%;
   padding: $padding*1.5;
   position: fixed;
-  right: 0;
   top: 0;
   z-index: 999;
   -webkit-box-shadow: 0 0 15px 0 rgba($color-dark, 0.33);
@@ -46,36 +46,12 @@
   }
 }
 
-.book-hide {
+.panel-hide {
   right: -100%;
   transition: $transition;
 }
 
-.book-show {
+.panel-show {
   right: 0;
   transition: $transition;
-}
-
-.resume {
-  background-color: rgba($color-dark, 0.25);
-  border-radius: $rounded;
-  display: flex;
-  margin-top: $padding*2;
-  padding: $padding;
-
-  div {
-    flex: 1;
-    text-align: center;
-
-    span {
-      display: block;
-      margin: 0;
-      padding: 0;
-    }
-
-    h2 {
-      display: block;
-      padding: 0 0 $padding * -1 0;
-    }
-  }
 }
