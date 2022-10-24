@@ -26,6 +26,7 @@ const Booking = (props) => {
 
   const dateStart = useRef();
   const dateEnd = useRef();
+  const form = useRef();
 
   const [days, setDays] = useState('---');
   const [cost, setCost] = useState('---');
@@ -58,7 +59,7 @@ const Booking = (props) => {
 
   const sendForm = () => {
     /* PUT SOME VALIDATION HERE */
-    document.getElementById('bookingForm').submit();
+    form.current.submit();
   };
 
   return (
@@ -71,10 +72,10 @@ const Booking = (props) => {
       </div>
       <h2>BOOKING</h2>
       <div className="centerForm">
-        <form id="bookingForm" action="#" method="get">
+        <form ref={form} action="#" method="post">
           <input type="hidden" name="user" value={user} />
 
-          <div className="add-padding-below">
+          <div className="add-margin-below">
             <label htmlFor="vehicle">Vehicle</label>
             <select
               name="vehicle"
@@ -90,7 +91,7 @@ const Booking = (props) => {
             </select>
           </div>
 
-          <div className="add-padding-below">
+          <div className="add-margin-below">
             <label htmlFor="date-start">Start Date</label>
             <input
               type="date"
@@ -104,8 +105,8 @@ const Booking = (props) => {
             />
           </div>
 
-          <div className="add-padding-below">
-            <label htmlFor="date-end">Start end</label>
+          <div className="add-margin-below">
+            <label htmlFor="date-end">End Date</label>
             <input
               type="date"
               ref={dateEnd}
@@ -118,7 +119,7 @@ const Booking = (props) => {
             />
           </div>
 
-          <div className="add-padding-below">
+          <div className="add-margin-below">
             <label htmlFor="city">City</label>
             <select name="city" className="form-field" required>
               <option value="">Select one</option>
