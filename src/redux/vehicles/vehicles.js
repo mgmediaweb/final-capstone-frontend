@@ -22,7 +22,7 @@ function getVehicles() {
   return async (dispatch) => {
     const requestParameters = {
       headers: {
-        Authorization: JSON.parse(localStorage.getItem('current_user').token),
+        Authorization: JSON.parse(localStorage.getItem('current_user')).token,
       },
     };
     const response = await fetch(url, requestParameters);
