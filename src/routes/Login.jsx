@@ -17,15 +17,15 @@ function LoginScreen() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(
         {
-          email: name.current.value,
+          name: name.current.value,
           password: password.current.value,
         },
       ),
     };
 
-    const response = await fetch('https://elsonotake-backend.herokuapp.com/api/v1/auth/login', requestOptions);
-    const userData = response.data;
-    console.log(userData);
+    const dataResponse = await fetch('https://elsonotake-backend.herokuapp.com/api/v1/auth/login', requestOptions);
+    const userData = await dataResponse.json();
+    localStorage.setItem('current_user', JSON.stringify(userData));
   };
 
   return (
