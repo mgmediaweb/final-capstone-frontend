@@ -1,59 +1,80 @@
 /* eslint linebreak-style: ["error", "windows"] */
 import { Link } from 'react-router-dom';
+import { useRef } from 'react';
 import Button from '../components/button/Button';
 import './Login.scss';
 
-const sendForm = () => {
-  /* PUT SOME VALIDATION HERE */
-  document.getElementById('bookingForm').submit();
-};
+function LoginScreen() {
+  const loginForm = useRef();
+  const name = useRef();
+  const password = useRef();
 
-const LoginScreen = () => (
-  <div className="container page-login">
+  const sendForm = () => {
+    /* PUT SOME VALIDATION HERE */
 
-    <form action="#" className="login-form" method="POST">
-      <h2>LOGIN</h2>
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(
+        {
+          email: name.current.value,
+          password: password.current.value,
+        },
+      ),
+    };
 
-      <div className="add-padding-below">
-        <input
-          type="email"
-          id="email"
-          name="email"
-          className="form-field"
-          placeholder="Email"
-          required
-        />
-      </div>
+    fetch('https://elsonotake-backend.herokuapp.com/api/v1/auth/login', requestOptions);
+    loginForm.current.submit();
+  };
 
-      <div className="add-padding-below">
-        <input
-          type="text"
-          id="password"
-          name="password"
-          className="form-field"
-          placeholder="Password"
-          required
-        />
-      </div>
+  return (
+    <div className="container page-login">
 
-      <p className="signin-message">
-        Don&apos;t have an account yet?
-        <Link to="/signup">
-          SIGN UP
-        </Link>
-      </p>
+      <form action="#" className="login-form" method="POST" ref={loginForm}>
+        <h2>LOGIN</h2>
 
-      <div className="form-bottom-bar">
-        <Button
-          btnAxn={sendForm}
-          label="Login"
-          size="main"
-          color="dark"
-        />
-      </div>
-    </form>
+        <div className="add-padding-below">
+          <input
+            ref={name}
+            type="text"
+            id="name"
+            name="name"
+            className="form-field"
+            placeholder="Name"
+            required
+          />
+        </div>
 
-  </div>
-);
+        <div className="add-padding-below">
+          <input
+            ref={password}
+            type="text"
+            id="password"
+            name="password"
+            className="form-field"
+            placeholder="Password"
+            required
+          />
+        </div>
 
+        <p className="signin-message">
+          Don&apos;t have an account yet?
+          <Link to="/signup">
+            SIGN UP
+          </Link>
+        </p>
+
+        <div className="form-bottom-bar">
+          <Button
+            btnAxn={sendForm}
+            label="Login"
+            size="main"
+            color="dark"
+          />
+        </div>
+      </form>
+
+    </div>
+  );
+}
 export default LoginScreen;

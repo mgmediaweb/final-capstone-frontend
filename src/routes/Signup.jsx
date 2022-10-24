@@ -1,19 +1,37 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../components/button/Button';
 
-const sendForm = () => {
-  /* PUT SOME VALIDATION HERE */
-  document.getElementById('bookingForm').submit();
-};
-
 function Signup() {
+  const name = useRef();
+  const email = useRef();
+  const password = useRef();
+  const loginForm = useRef();
+
+  const sendForm = () => {
+    /* PUT SOME VALIDATION HERE */
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(
+        {
+          NavigationPreloadManager: email.current.value,
+          email: email.current.value,
+          password: password.current.value,
+        },
+      ),
+    };
+
+    fetch('https://elsonotake-backend.herokuapp.com/api/v1/auth/login', requestOptions);
+    loginForm.current.submit();
+  };
   return (
     <div className="container page-login">
-      <form action="#" className="login-form" method="POST">
+      <form action="#" className="login-form" method="POST" id="signup-form" ref={loginForm}>
         <h2>SIGNUP</h2>
         <div className="add-padding-below">
           <input
+            ref={name}
             type="text"
             id="name"
             name="name"
@@ -25,6 +43,7 @@ function Signup() {
 
         <div className="add-padding-below">
           <input
+            ref={email}
             type="email"
             id="email"
             name="email"
@@ -36,6 +55,7 @@ function Signup() {
 
         <div className="add-padding-below">
           <input
+            ref={password}
             type="text"
             id="password"
             name="password"
