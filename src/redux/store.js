@@ -1,3 +1,4 @@
+/* eslint linebreak-style: ["error", "windows"] */
 import { configureStore } from '@reduxjs/toolkit';
 import vehiclesReducer from './vehicles/vehicles';
 

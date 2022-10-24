@@ -18,8 +18,9 @@ function App() {
       <Routes>
         <Route element={<AboutScreen />} path="/about" />
         <Route element={<BookingScreen />} path="/booking" />
-        <Route element={<DetailScreen />} path="/detail/:id" />
+        <Route element={<DetailScreen />} path="/models/:id" />
         <Route element={<ReservationScreen />} path="/reservation" />
+        <Route element={<HomeScreen />} path="/models" />
         <Route index element={<HomeScreen />} />
         <Route
           element={

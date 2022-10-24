@@ -1,3 +1,4 @@
+/* eslint linebreak-style: ["error", "windows"] */
 const url = 'https://elsonotake-backend.herokuapp.com/api/v1/vehicles';
 
 // actions
