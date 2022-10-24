@@ -26,7 +26,8 @@ function App() {
         <Route element={<BookingScreen />} path="/booking" />
         <Route element={<DetailScreen />} path="/detail/:id" />
         <Route element={<ReservationScreen />} path="/reservation" />
-        <Route element={<HomeScreen />} index exact />
+        <Route element={<HomeScreen />} path="/models" />
+        <Route element={<HomeScreen />} index />
         <Route
           element={(
             <section className="flex-center">
