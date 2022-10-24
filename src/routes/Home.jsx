@@ -13,8 +13,6 @@ function Home() {
   const dispatch = useDispatch();
   const vehicles = useSelector((state) => state.vehicles);
 
-  console.log(vehicles);
-
   useEffect(() => {
     dispatch(getVehicles());
   }, []);
