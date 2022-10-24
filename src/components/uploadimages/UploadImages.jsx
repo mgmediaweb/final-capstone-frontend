@@ -42,9 +42,7 @@ const UploadImages = (props) => {
 
     const response = await fetch(url, {
       method: 'POST',
-      headers: {
-        Accept: 'application/json',
-      },
+      headers: { Accept: 'application/json' },
       body: JSON.stringify(body),
     });
 
