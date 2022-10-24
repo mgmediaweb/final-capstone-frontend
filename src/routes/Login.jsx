@@ -24,7 +24,6 @@ function LoginScreen() {
     };
 
     fetch('https://elsonotake-backend.herokuapp.com/api/v1/auth/login', requestOptions);
-    loginForm.current.submit();
   };
 
   return (
