@@ -42,7 +42,7 @@ const Navbar = () => {
           <nav>
             <ul>
               <li>
-                <NavLink to="/detail/1" onClick={() => setNavVisible(false)}>
+                <NavLink to="/models" onClick={() => setNavVisible(false)}>
                   MODELS
                 </NavLink>
               </li>
