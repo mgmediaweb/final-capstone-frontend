@@ -13,8 +13,8 @@ const Gallery = (props) => {
         data.map((photo) => (
           <div
             key={photo}
-            onClick={() => btnAxn(photo)}
-            style={{ backgroundImage: `url(/assets/vehicles/${photo})` }}
+            onClick={() => btnAxn(photo.photo)}
+            style={{ backgroundImage: `url(${photo.photo})` }}
           />
         ))
       }
