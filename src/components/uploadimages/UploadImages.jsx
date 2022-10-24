@@ -48,6 +48,7 @@ const UploadImages = (props) => {
 
     if (response.status === 200) setStatus('success');
     else setStatus('error');
+    setGallery(null);
   };
 
   const sendForm = () => {
