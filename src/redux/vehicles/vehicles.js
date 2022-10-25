@@ -20,7 +20,12 @@ export default function vehiclesReducer(state = [], action = {}) {
 
 function getVehicles() {
   return async (dispatch) => {
-    const response = await fetch(url);
+    const requestParameters = {
+      headers: {
+        Authorization: JSON.parse(localStorage.getItem('current_user')).token,
+      },
+    };
+    const response = await fetch(url, requestParameters);
     const vehicles = await response.json();
     dispatch({
       type: GET_VEHICLES,
