@@ -9,10 +9,13 @@ const AdminScreen = () => {
   const navigate = useNavigate();
   const [uploadVisible, setUploadVisible] = useState(false);
   const [vehicleSelected, setvehicleSelected] = useState({ id: 0, model: 'undefined' });
+  const [isIntruder, setIsIntruder] = useState(true);
 
   useEffect(() => {
-    if (JSON.parse(localStorage.getItem('current_user')).role !== 'admin') {
-      navigate('/');
+    if (JSON.parse(localStorage.getItem('current_user')).role === 'admin') {
+      setIsIntruder(false);
+    } else {
+      setIsIntruder(true);
     }
   }, []);
 
@@ -24,6 +27,14 @@ const AdminScreen = () => {
   };
 
   const addVehicle = () => navigate('/admin/new', { replace: true }, [navigate]);
+
+  if (isIntruder) {
+    return (
+      <div className="container page-admin">
+        <h1>You have no power here...</h1>
+      </div>
+    );
+  }
 
   return (
     <div className="container page-admin">
