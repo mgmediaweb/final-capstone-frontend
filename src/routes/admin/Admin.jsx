@@ -1,6 +1,7 @@
 /* eslint linebreak-style: ["error", "windows"] */
 import { Link, useNavigate } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import UploadImages from '../../components/uploadimages/UploadImages';
 import Button from '../../components/button/Button';
 
@@ -9,22 +10,13 @@ const AdminScreen = () => {
   const [uploadVisible, setUploadVisible] = useState(false);
   const [vehicleSelected, setvehicleSelected] = useState({ id: 0, model: 'undefined' });
 
-  const vehicles = [
-    {
-      id: 1,
-      photo: 'model1a.jpg',
-      brand: 'Lamborghini',
-      model: 'AVENTADOR LP 780-4 ULTIMAE',
-      year: 2022,
-    },
-    {
-      id: 6,
-      photo: 'model2a.jpg',
-      brand: 'Mazeratti',
-      model: 'MC20 CIELO',
-      year: 2019,
-    },
-  ];
+  useEffect(() => {
+    if (JSON.parse(localStorage.getItem('current_user')).role !== 'admin') {
+      navigate('/');
+    }
+  }, []);
+
+  const vehicles = useSelector((state) => state.vehicles);
 
   const showUpload = (car = null) => {
     if (car) setvehicleSelected(car);
