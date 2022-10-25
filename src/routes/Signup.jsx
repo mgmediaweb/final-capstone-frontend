@@ -1,13 +1,20 @@
 /* eslint linebreak-style: ["error", "windows"] */
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../components/button/Button';
+import './Login.scss';
 
 function Signup() {
   const name = useRef();
   const email = useRef();
   const password = useRef();
   const loginForm = useRef();
+
+  const [isActive, setActive] = useState(true);
+
+  const ToggleClass = () => {
+    setActive(false);
+  };
 
   const sendForm = async () => {
     const signupOptions = {
@@ -36,16 +43,22 @@ function Signup() {
     };
 
     const dataResponse = await fetch('https://elsonotake-backend.herokuapp.com/api/v1/auth/login', loginOptions);
-    const userData = await dataResponse.json();
-    localStorage.setItem('current_user', JSON.stringify(userData));
-    window.location.href = '/';
+    if (dataResponse.ok) {
+      const userData = await dataResponse.json();
+      localStorage.setItem('current_user', JSON.stringify(userData));
+      window.location.href = '/';
+    } else {
+      ToggleClass();
+    }
   };
 
   return (
     <div className="container page-login">
       <form action="#" className="login-form" method="POST" id="signup-form" ref={loginForm}>
         <h2>SIGNUP</h2>
+
         <div className="add-padding-below">
+          <span className={isActive ? 'error-message' : 'error-message active'}>This username or email already exists </span>
           <input
             ref={name}
             type="text"

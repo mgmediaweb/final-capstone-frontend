@@ -40,3 +40,12 @@
     color: white;
   }
 }
+
+.error-message {
+  display: none;
+  color: red;
+
+  &.active {
+    display: block;
+  }
+}
