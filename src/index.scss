@@ -193,6 +193,11 @@ h1 {
 }
 
 .grid {
+  &-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+    
   &-simple {
     width: 100%;
   }
