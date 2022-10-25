@@ -31,7 +31,7 @@ const AdminScreen = () => {
   if (isIntruder) {
     return (
       <div className="container page-admin">
-        <h1>You have no power here...</h1>
+        <h1>You need admin access for this page</h1>
       </div>
     );
   }
