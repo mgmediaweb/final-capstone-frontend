@@ -1,30 +1,15 @@
 /* eslint linebreak-style: ["error", "windows"] */
 import { Link, useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import UploadImages from '../../components/uploadimages/UploadImages';
 import Button from '../../components/button/Button';
 
 const AdminScreen = () => {
   const navigate = useNavigate();
+  const vehicles = useSelector((state) => state.vehicles);
   const [uploadVisible, setUploadVisible] = useState(false);
   const [vehicleSelected, setvehicleSelected] = useState({ id: 0, model: 'undefined' });
-
-  const vehicles = [
-    {
-      id: 1,
-      photo: 'model1a.jpg',
-      brand: 'Lamborghini',
-      model: 'AVENTADOR LP 780-4 ULTIMAE',
-      year: 2022,
-    },
-    {
-      id: 6,
-      photo: 'model2a.jpg',
-      brand: 'Mazeratti',
-      model: 'MC20 CIELO',
-      year: 2019,
-    },
-  ];
 
   const showUpload = (car = null) => {
     if (car) setvehicleSelected(car);
@@ -55,10 +40,6 @@ const AdminScreen = () => {
                   value={car}
                   size="small"
                 />
-                <Link to={`/admin/edit/${car.id}`} className="add-padding-horizontal">
-                  Edit
-                </Link>
-
                 <Link to={`/admin/edit/${car.id}`} className="add-padding-horizontal">
                   Delete
                 </Link>
@@ -97,10 +78,6 @@ const AdminScreen = () => {
                     />
                   </td>
                   <td className="text-center">
-                    <Link to={`/admin/edit/${car.id}`} className="add-padding-horizontal">
-                      Edit
-                    </Link>
-
                     <Link to={`/admin/edit/${car.id}`} className="add-padding-horizontal">
                       Delete
                     </Link>
