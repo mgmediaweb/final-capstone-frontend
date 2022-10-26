@@ -29,7 +29,6 @@ function getReservations() {
     // eslint-disable-next-line max-len
     // const response = await fetch(`${url}/${JSON.parse(localStorage.getItem('current_user')).id}/bookings}`, requestParameters);
     const reservations = await response.json();
-    console.log(reservations);
     dispatch({
       type: GET_RESERVATIONS,
       payload: reservations,

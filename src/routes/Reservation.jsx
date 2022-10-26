@@ -15,12 +15,11 @@ const ReservationScreen = () => {
 
   const reservations = useSelector((state) => state.reservations);
   const vehicles = useSelector((state) => state.vehicles);
+
   const getVehicle = (vehicleId) => {
     const vehicle = vehicles.find((vehicle) => vehicle.id === vehicleId);
     return vehicle;
   };
-  console.log('vehicles: ', vehicles);
-  console.log('reservations: ', reservations);
 
   return (
     <div className="container page-reservation">
