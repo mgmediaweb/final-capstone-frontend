@@ -17,13 +17,16 @@ a {
 }
 
 article {
+  align-items: center;
   border: solid 1px $color-silver;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: $padding * 2;
   padding: $padding;
-  box-shadow: 0 5px 5px 0 rgba($color-dark, 0.15);
+  box-shadow:
+    20px 20px 40px #bebebe5f,
+    -20px -20px 60px #fff;
   transition: $transition;
 
   h2 {
@@ -80,6 +83,27 @@ article {
     align-items: center;
     margin-bottom: $padding;
     display: flex;
+
+    .reservation-photo {
+      width: 70px;
+      height: 70px;
+      margin-right: $padding;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        transition: 0.2s;
+        cursor: pointer;
+        margin-bottom: $spacer;
+
+        &:hover {
+          outline: $color-primary 1px solid;
+          outline-offset: calc($padding / 2);
+        }
+      }
+    }
   }
 
   .photo {
