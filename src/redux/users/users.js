@@ -1,5 +1,5 @@
 /* eslint linebreak-style: ["error", "windows"] */
-// const url = 'https://elsonotake-backend.herokuapp.com/api/v1/users';
+const url = 'https://elsonotake-backend.herokuapp.com/api/v1/users';
 
 // actions
 
@@ -25,9 +25,7 @@ function getReservations() {
         Authorization: JSON.parse(localStorage.getItem('current_user')).token,
       },
     };
-    const response = await fetch('https://elsonotake-backend.herokuapp.com/api/v1/users/1/bookings', requestParameters);
-    // eslint-disable-next-line max-len
-    // const response = await fetch(`${url}/${JSON.parse(localStorage.getItem('current_user')).id}/bookings}`, requestParameters);
+    const response = await fetch(`${url}/${JSON.parse(localStorage.getItem('current_user')).id}/bookings`, requestParameters);
     const reservations = await response.json();
     dispatch({
       type: GET_RESERVATIONS,
