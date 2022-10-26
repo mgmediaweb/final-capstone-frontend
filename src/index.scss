@@ -126,6 +126,11 @@ h1 {
   color: $color-dark;
 }
 
+.action-btn {
+  display: flex;
+  gap: $padding;
+}
+
 .add-margin-below {
   margin-bottom: $padding;
 }
@@ -231,6 +236,10 @@ h1 {
   }
 
   &-triple {
+    width: 100%;
+  }
+
+  &-cuadra {
     width: 100%;
   }
 }
@@ -414,6 +423,10 @@ h1 {
 
     &-triple {
       grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &-cuadra {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
     }
   }
 

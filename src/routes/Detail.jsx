@@ -9,11 +9,12 @@ import Button from '../components/button/Button';
 import Gallery from '../components/gallery/Gallery';
 
 const DetailScreen = () => {
+  const defaultImage = 'https://firebasestorage.googleapis.com/v0/b/exo-cars-5611d.appspot.com/o/empty_car.jpg?alt=media&token=952474fe-a836-4a2e-8576-6961aac8d7e3';
   const { id } = useParams();
   const vehicles = useSelector((state) => state.vehicles);
   const car = vehicles.find((element) => element.id === parseInt(id, 10));
   const gallery = car.galleries;
-  const [background, setBackground] = useState(gallery[0].photo);
+  const [background, setBackground] = useState(gallery.length ? gallery[0].photo : defaultImage);
   const [bookVisible, setBookVisible] = useState(false);
 
   const showBooking = () => setBookVisible(!bookVisible);
@@ -50,6 +51,13 @@ const DetailScreen = () => {
               <tr>
                 <td>0-100 km/h</td>
                 <td className="text-end">{car.acceleration}</td>
+              </tr>
+              <tr>
+                <td>Booking price</td>
+                <td className="text-end">
+                  {car.price}
+                  USD
+                </td>
               </tr>
             </tbody>
           </table>

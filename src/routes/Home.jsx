@@ -11,6 +11,7 @@ import { getVehicles } from '../redux/vehicles/vehicles';
 import { getReservations } from '../redux/users/users';
 
 function Home() {
+  const defaultImage = 'https://firebasestorage.googleapis.com/v0/b/exo-cars-5611d.appspot.com/o/empty_car.jpg?alt=media&token=952474fe-a836-4a2e-8576-6961aac8d7e3';
   const dispatch = useDispatch();
   const vehicles = useSelector((state) => state.vehicles);
 
@@ -58,7 +59,7 @@ function Home() {
                 brand={car.brand}
                 model={car.model}
                 description={car.description}
-                image={car.galleries[0].photo}
+                image={car.galleries.length ? car.galleries[0].photo : defaultImage}
                 id={car.id}
               />
             ))

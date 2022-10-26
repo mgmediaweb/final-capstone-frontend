@@ -1,3 +1,4 @@
+/* eslint linebreak-style: ["error", "windows"] */
 import React from 'react';
 import { Outlet, Navigate } from 'react-router-dom';
 

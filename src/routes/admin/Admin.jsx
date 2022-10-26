@@ -1,15 +1,20 @@
 /* eslint linebreak-style: ["error", "windows"] */
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import UploadImages from '../../components/uploadimages/UploadImages';
 import Button from '../../components/button/Button';
 
 const AdminScreen = () => {
+  const vehicles = useSelector((state) => state.vehicles);
   const navigate = useNavigate();
   const [uploadVisible, setUploadVisible] = useState(false);
   const [vehicleSelected, setvehicleSelected] = useState({ id: 0, model: 'undefined' });
   const [isIntruder, setIsIntruder] = useState(true);
+
+  if (vehicles.length === 0) {
+    window.location.href = '/models';
+  }
 
   useEffect(() => {
     if (JSON.parse(localStorage.getItem('current_user')).role === 'admin') {
@@ -19,14 +24,23 @@ const AdminScreen = () => {
     }
   }, []);
 
-  const vehicles = useSelector((state) => state.vehicles);
-
   const showUpload = (car = null) => {
     if (car) setvehicleSelected(car);
     setUploadVisible(!uploadVisible);
   };
 
   const addVehicle = () => navigate('/admin/new', { replace: true }, [navigate]);
+
+  const deleteVehicle = async (id) => {
+    const deleteCar = {
+      method: 'DELETE',
+      headers: {
+        Authorization: JSON.parse(localStorage.getItem('current_user')).token,
+      },
+    };
+    await fetch(`https://elsonotake-backend.herokuapp.com/api/v1/vehicles/${id}`, deleteCar);
+    window.location.href = '/models';
+  };
 
   if (isIntruder) {
     return (
@@ -49,70 +63,25 @@ const AdminScreen = () => {
           vehicles.map((car) => (
             <article key={car.id}>
               <div className="main-info">
-                <p>{`${car.id}. ${car.brand} ${car.model}`}</p>
+                <p>{`${car.year}. ${car.brand} ${car.model} - Rent price: ${car.price}(USD)`}</p>
               </div>
-              <div className="text-end">
+              <div className="action-btn text-end">
                 <Button
                   btnAxn={showUpload}
                   label="Images"
                   value={car}
                   size="small"
                 />
-                <Link to={`/admin/edit/${car.id}`} className="add-padding-horizontal">
-                  Edit
-                </Link>
-
-                <Link to={`/admin/edit/${car.id}`} className="add-padding-horizontal">
-                  Delete
-                </Link>
+                <Button
+                  btnAxn={deleteVehicle}
+                  label="Delete"
+                  value={car.id}
+                  size="small"
+                />
               </div>
             </article>
           ))
         }
-
-        <table className="table-admin" style={{ display: 'none' }}>
-          <thead>
-            <tr>
-              <th>Id</th>
-              <th>Cover</th>
-              <th>Brand</th>
-              <th>Model</th>
-              <th>Year</th>
-              <th>Images</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              vehicles.map((car) => (
-                <tr key={car.id}>
-                  <td className="text-center">{car.id}</td>
-                  <td>image</td>
-                  <td>{car.brand}</td>
-                  <td>{car.model}</td>
-                  <td className="text-center">{car.year}</td>
-                  <td className="text-center">
-                    <Button
-                      btnAxn={showUpload}
-                      label="Upload"
-                      value={car}
-                      size="small"
-                    />
-                  </td>
-                  <td className="text-center">
-                    <Link to={`/admin/edit/${car.id}`} className="add-padding-horizontal">
-                      Edit
-                    </Link>
-
-                    <Link to={`/admin/edit/${car.id}`} className="add-padding-horizontal">
-                      Delete
-                    </Link>
-                  </td>
-                </tr>
-              ))
-            }
-          </tbody>
-        </table>
       </div>
       <UploadImages
         btnAxn={showUpload}
