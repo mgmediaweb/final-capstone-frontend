@@ -6,7 +6,7 @@ import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { FaTimes } from 'react-icons/fa';
 import './Booking.scss';
-import Button from '../button/Button';
+import { useSelector } from 'react-redux';
 
 const createDate = (dateStr) => {
   const dateArr = dateStr.split('-');
@@ -17,16 +17,17 @@ const Booking = (props) => {
   const {
     btnAxn,
     close,
-    price,
     state,
     vehicle,
   } = props;
 
-  const user = 1; // GET USER ID FROM THE SESSION
+  const user = JSON.parse(localStorage.getItem('current_user')).id;
+  const car = useSelector((state) => state.vehicles);
+  let carPrice = 0;
 
   const dateStart = useRef();
   const dateEnd = useRef();
-  const form = useRef();
+  const vehicles = useRef();
 
   const [days, setDays] = useState('---');
   const [cost, setCost] = useState('---');
@@ -42,7 +43,7 @@ const Booking = (props) => {
       const numberFormat = new Intl.NumberFormat('en-US', options);
 
       const diffDays = Math.round((createDate(dateEndVal) - createDate(dateStartVal)) / oneDay) + 1;
-      const rentCost = diffDays * price;
+      const rentCost = diffDays * carPrice;
 
       if (diffDays >= 0) {
         setDays(diffDays);
@@ -57,9 +58,32 @@ const Booking = (props) => {
     }
   };
 
-  const sendForm = () => {
-    /* PUT SOME VALIDATION HERE */
-    form.current.submit();
+  const findPrice = () => {
+    const vehicleSelect = vehicles.current.value;
+    const carSelected = car.find((element) => element.id === parseInt(vehicleSelect, 10));
+    carPrice = carSelected.price;
+    calcDays();
+  };
+
+  const sendForm = async (e) => {
+    e.preventDefault();
+    const postBody = {
+      start_date: e.target.date_start.value,
+      end_date: e.target.date_end.value,
+      city: e.target.city.value,
+      vehicle_id: parseInt(e.target.vehicle.value, 10),
+      user_id: user,
+    };
+    console.log(postBody);
+    const postBooking = {
+      method: 'POST',
+      headers: {
+        Authorization: JSON.parse(localStorage.getItem('current_user')).token,
+      },
+      body: JSON.stringify(postBody),
+    };
+    await fetch(`https://elsonotake-backend.herokuapp.com/api/v1/users/${user}/bookings`, postBooking);
+    window.location.href = '/models';
   };
 
   return (
@@ -72,7 +96,7 @@ const Booking = (props) => {
       </div>
       <h2>BOOKING</h2>
       <div className="centerForm">
-        <form ref={form} action="#" method="post">
+        <form onSubmit={sendForm} method="post">
           <input type="hidden" name="user" value={user} />
 
           <div className="add-margin-below">
@@ -80,41 +104,51 @@ const Booking = (props) => {
             <select
               name="vehicle"
               className="form-field"
+              ref={vehicles}
+              onChange={findPrice}
               defaultValue={vehicle || ''}
               required
             >
-              <option value="">Select one</option>
-              <option value="1">Ferrari Testarossa - 1996</option>
-              <option value="2">Iso Automovil Isseta - 1956</option>
-              <option value="3">Tesla Model 3 - 2021</option>
-              <option value="4">Roll Royce Gost - 2022</option>
+              <option value="">Select Car</option>
+              {
+                car.map((carro) => (
+                  <option
+                    key={carro.id}
+                    value={carro.id}
+                  >
+                    {carro.brand}
+                    {' '}
+                    {carro.model}
+                  </option>
+                ))
+              }
             </select>
           </div>
 
           <div className="add-margin-below">
-            <label htmlFor="date-start">Start Date</label>
+            <label htmlFor="date_start">Start Date</label>
             <input
               type="date"
               ref={dateStart}
-              id="date-start"
-              name="date-start"
+              id="date_start"
+              name="date_start"
               placeholder="MM/DD/YYYY"
               className="form-field"
-              onChange={calcDays}
+              onChange={findPrice}
               required
             />
           </div>
 
           <div className="add-margin-below">
-            <label htmlFor="date-end">End Date</label>
+            <label htmlFor="date_end">End Date</label>
             <input
               type="date"
               ref={dateEnd}
-              id="date-end"
-              name="date-end"
+              id="date_end"
+              name="date_end"
               placeholder="MM/DD/YYYY"
               className="form-field"
-              onChange={calcDays}
+              onChange={findPrice}
               required
             />
           </div>
@@ -142,13 +176,7 @@ const Booking = (props) => {
           </div>
 
           <div className="form-bottom-bar">
-            <Button
-              btnAxn={sendForm}
-              iconEnd="check"
-              label="Book now"
-              size="main"
-              color="dark"
-            />
+            <button type="submit">Book now</button>
           </div>
         </form>
       </div>
@@ -160,14 +188,12 @@ Booking.propTypes = {
   btnAxn: PropTypes.func,
   close: PropTypes.bool,
   state: PropTypes.bool,
-  price: PropTypes.number,
   vehicle: PropTypes.number,
 };
 
 Booking.defaultProps = {
   btnAxn: null,
   close: true,
-  price: 0,
   state: false,
   vehicle: null,
 };
