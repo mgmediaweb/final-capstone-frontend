@@ -1,20 +1,17 @@
 /* eslint linebreak-style: ["error", "windows"] */
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-// import { useEffect } from 'react';
-// import { getReservations } from '../redux/users/users';
-// import { getVehicles } from '../redux/vehicles/vehicles';
 
 const ReservationScreen = () => {
-  // const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   dispatch(getReservations());
-  //   dispatch(getVehicles());
-  // }, []);
-
   const vehicles = useSelector((state) => state.vehicles);
   const reservations = useSelector((state) => state.reservations);
+
+  console.log('vehicles: ', vehicles);
+  console.log('reservations: ', reservations);
+
+  if (vehicles.length === 0 || reservations.length === 0) {
+    window.location.href = '/models';
+  }
 
   const getVehicle = (vehicleId) => {
     const vehicle = vehicles.find((vehicle) => vehicle.id === vehicleId);
