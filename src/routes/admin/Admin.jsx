@@ -1,15 +1,25 @@
 /* eslint linebreak-style: ["error", "windows"] */
 import { Link, useNavigate } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import UploadImages from '../../components/uploadimages/UploadImages';
 import Button from '../../components/button/Button';
 
 const AdminScreen = () => {
   const navigate = useNavigate();
-  const vehicles = useSelector((state) => state.vehicles);
   const [uploadVisible, setUploadVisible] = useState(false);
   const [vehicleSelected, setvehicleSelected] = useState({ id: 0, model: 'undefined' });
+  const [isIntruder, setIsIntruder] = useState(true);
+
+  useEffect(() => {
+    if (JSON.parse(localStorage.getItem('current_user')).role === 'admin') {
+      setIsIntruder(false);
+    } else {
+      setIsIntruder(true);
+    }
+  }, []);
+
+  const vehicles = useSelector((state) => state.vehicles);
 
   const showUpload = (car = null) => {
     if (car) setvehicleSelected(car);
@@ -17,6 +27,14 @@ const AdminScreen = () => {
   };
 
   const addVehicle = () => navigate('/admin/new', { replace: true }, [navigate]);
+
+  if (isIntruder) {
+    return (
+      <div className="container page-admin">
+        <h1>You need admin access for this page</h1>
+      </div>
+    );
+  }
 
   return (
     <div className="container page-admin">
@@ -40,6 +58,10 @@ const AdminScreen = () => {
                   value={car}
                   size="small"
                 />
+                <Link to={`/admin/edit/${car.id}`} className="add-padding-horizontal">
+                  Edit
+                </Link>
+
                 <Link to={`/admin/edit/${car.id}`} className="add-padding-horizontal">
                   Delete
                 </Link>
@@ -78,6 +100,10 @@ const AdminScreen = () => {
                     />
                   </td>
                   <td className="text-center">
+                    <Link to={`/admin/edit/${car.id}`} className="add-padding-horizontal">
+                      Edit
+                    </Link>
+
                     <Link to={`/admin/edit/${car.id}`} className="add-padding-horizontal">
                       Delete
                     </Link>
