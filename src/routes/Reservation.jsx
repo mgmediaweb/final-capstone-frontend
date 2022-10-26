@@ -48,6 +48,9 @@ const ReservationScreen = () => {
                   <h2 className="reservation-model">{getVehicle(item.vehicle_id).model}</h2>
                 </div>
               </div>
+              <div className="text-end">
+                <p>{item.city}</p>
+              </div>
               <div className="dateRange">
                 <div>
                   <span>Start</span>
