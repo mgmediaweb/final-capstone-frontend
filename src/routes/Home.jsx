@@ -8,6 +8,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import './Home.scss';
 import CarCard from '../components/carCard/CarCard';
 import { getVehicles } from '../redux/vehicles/vehicles';
+import { getReservations } from '../redux/users/users';
 
 function Home() {
   const defaultImage = 'https://firebasestorage.googleapis.com/v0/b/exo-cars-5611d.appspot.com/o/empty_car.jpg?alt=media&token=952474fe-a836-4a2e-8576-6961aac8d7e3';
@@ -15,6 +16,7 @@ function Home() {
   const vehicles = useSelector((state) => state.vehicles);
 
   useEffect(() => {
+    dispatch(getReservations());
     dispatch(getVehicles());
   }, []);
 
