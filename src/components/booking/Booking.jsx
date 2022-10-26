@@ -74,7 +74,6 @@ const Booking = (props) => {
       vehicle_id: parseInt(e.target.vehicle.value, 10),
       user_id: user,
     };
-    console.log(postBody);
     const postBooking = {
       method: 'POST',
       headers: {
