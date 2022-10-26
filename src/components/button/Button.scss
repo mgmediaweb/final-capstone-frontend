@@ -2,14 +2,14 @@
 
 button {
   align-items: center;
-  background-color: $color-silver;
+  background-color: $color-dark;
   border: none;
   border-radius: 50px;
   color: $color-white;
   display: flex;
   font-size: 1rem;
   font-weight: 600;
-  padding: $padding * 0.75;
+  padding: $padding * 1.25;
   transition: $transition;
   user-select: none;
 
