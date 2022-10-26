@@ -13,15 +13,34 @@ import {
   FaTwitter,
 } from 'react-icons/fa';
 import './Navbar.scss';
+import Button from '../button/Button';
 
 const Navbar = () => {
   const [navVisible, setNavVisible] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
     if (window.innerWidth < 400) {
       setNavVisible(false);
     }
+
+    if (JSON.parse(localStorage.getItem('current_user'))) {
+      setIsLoggedIn(true);
+      if (JSON.parse(localStorage.getItem('current_user')).role === 'admin') {
+        setIsAdmin(true);
+      } else {
+        setIsAdmin(false);
+      }
+    } else {
+      setIsLoggedIn(false);
+    }
   }, []);
+
+  const endSession = () => {
+    window.localStorage.removeItem('current_user');
+    window.location.href = '/login';
+  };
 
   return (
     <>
@@ -61,11 +80,24 @@ const Navbar = () => {
                   ABOUT
                 </NavLink>
               </li>
+              {isAdmin && (
               <li>
                 <NavLink to="/admin" onClick={() => setNavVisible(false)}>
                   ADMIN
                 </NavLink>
               </li>
+              )}
+              {isLoggedIn && (
+              <li className="logout-button">
+                <Button
+                  label="LOGOUT"
+                  size="normal"
+                  color="dark"
+                  btnAxn={endSession}
+                />
+              </li>
+              )}
+
             </ul>
           </nav>
         </div>

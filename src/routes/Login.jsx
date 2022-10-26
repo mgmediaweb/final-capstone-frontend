@@ -10,14 +10,12 @@ function LoginScreen() {
   const password = useRef();
 
   const sendForm = async () => {
-    /* PUT SOME VALIDATION HERE */
-
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(
         {
-          name: name.current.value,
+          name: name.current.value.trim(),
           password: password.current.value,
         },
       ),

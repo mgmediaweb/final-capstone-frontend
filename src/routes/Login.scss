@@ -13,7 +13,7 @@
   padding: 2rem;
   width: 100%;
   min-width: 300px;
-  max-width: 600px;
+  max-width: 400px;
   text-align: center;
   margin: auto;
   border: $rounded;
@@ -28,13 +28,24 @@
 
 .form-field {
   background-color: lighten($color-primary, 25);
+  margin-bottom: $padding;
 }
 
 .signin-message {
   margin-top: $spacer;
+  color: $color-dark;
 
   a {
     padding-left: 0.5rem;
     color: white;
+  }
+}
+
+.error-message {
+  display: none;
+  color: red;
+
+  &.active {
+    display: block;
   }
 }
