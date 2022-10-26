@@ -6,9 +6,6 @@ const ReservationScreen = () => {
   const vehicles = useSelector((state) => state.vehicles);
   const reservations = useSelector((state) => state.reservations);
 
-  console.log('vehicles: ', vehicles);
-  console.log('reservations: ', reservations);
-
   if (vehicles.length === 0 || reservations.length === 0) {
     window.location.href = '/models';
   }
@@ -48,7 +45,7 @@ const ReservationScreen = () => {
                 </Link>
                 <div className="car-data">
                   <h4>{getVehicle(item.vehicle_id).brand}</h4>
-                  <h2>{getVehicle(item.vehicle_id).model}</h2>
+                  <h2 className="reservation-model">{getVehicle(item.vehicle_id).model}</h2>
                 </div>
               </div>
               <div className="dateRange">

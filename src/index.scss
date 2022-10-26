@@ -420,6 +420,10 @@ h1 {
   .page-reservation {
     .main-info {
       margin-bottom: 0;
+
+      .car-data h2 {
+        color: $color-primary;
+      }
     }
   }
 
