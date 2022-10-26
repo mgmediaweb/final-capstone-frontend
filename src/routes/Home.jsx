@@ -8,12 +8,14 @@ import 'slick-carousel/slick/slick-theme.css';
 import './Home.scss';
 import CarCard from '../components/carCard/CarCard';
 import { getVehicles } from '../redux/vehicles/vehicles';
+import { getReservations } from '../redux/users/users';
 
 function Home() {
   const dispatch = useDispatch();
   const vehicles = useSelector((state) => state.vehicles);
 
   useEffect(() => {
+    dispatch(getReservations());
     dispatch(getVehicles());
   }, []);
 
