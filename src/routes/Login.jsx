@@ -1,6 +1,6 @@
 /* eslint linebreak-style: ["error", "windows"] */
 import { Link } from 'react-router-dom';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import Button from '../components/button/Button';
 import './Login.scss';
 
@@ -8,6 +8,12 @@ function LoginScreen() {
   const loginForm = useRef();
   const name = useRef();
   const password = useRef();
+
+  const [isActive, setActive] = useState(true);
+
+  const ToggleClass = () => {
+    setActive(false);
+  };
 
   const sendForm = async () => {
     const requestOptions = {
@@ -22,9 +28,13 @@ function LoginScreen() {
     };
 
     const dataResponse = await fetch('https://elsonotake-backend.herokuapp.com/api/v1/auth/login', requestOptions);
-    const userData = await dataResponse.json();
-    localStorage.setItem('current_user', JSON.stringify(userData));
-    window.location.href = '/';
+    if (dataResponse.ok) {
+      const userData = await dataResponse.json();
+      localStorage.setItem('current_user', JSON.stringify(userData));
+      window.location.href = '/';
+    } else {
+      ToggleClass();
+    }
   };
 
   return (
@@ -34,6 +44,8 @@ function LoginScreen() {
         <h2>LOGIN</h2>
 
         <div className="add-padding-below">
+          <span className={isActive ? 'error-message' : 'error-message active'}>Error with credentials</span>
+
           <input
             ref={name}
             type="text"
