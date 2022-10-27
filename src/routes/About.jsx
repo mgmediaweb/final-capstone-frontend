@@ -31,20 +31,32 @@ const AboutScreen = () => {
     <div className="container page-about">
       <div className="info-container">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed interdum lorem.
-          Quisque sed eleifend urna, in mattis lectus. Integer eu nulla ut libero gravida maximus.
-          Nam tempor felis semper eros tristique dictum. Pellentesque in rutrum lorem, nec gravida
-          lacus. Donec ullamcorper turpis non nisi euismod, nec vulputate justo pulvinar. Morbi
-          quam magna, mattis dignissim blandit nec, rhoncus non dui.
+          License Requirements: US & Canadian residents must have a Valid driver’s license and
+          must be present at the time of the rental. No photocopies or temporary license’s accepted.
         </p>
+
         <p>
-          Duis porta quis ligula sed volutpat. Maecenas ut neque sed ipsum eleifend feugiat.
-          Nullam id euismod quam. Nam eleifend, eros sit amet interdum maximus, lectus metus
-          tristique mi, sit amet fermentum dui nunc ut nibh. Praesent dapibus nisl leo, vitae
-          sodales erat finibus ut. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-          In accumsan tortor at sapien vehicula, at efficitur metus pulvinar. Nunc ornare ex ac
-          enim vulputate fringilla. Aliquam lacus purus, lacinia id dolor vel, dictum malesuada
-          orci. Morbi eleifend enim commodo arcu rhoncus blandit.
+          International Clients: Clients traveling from abroad will need to obtain their own
+          International Auto Insurance Coverage. We do not offer any insurance coverage here to our
+          clients.
+        </p>
+
+        <p>
+          Cancellation Policy: Cancellations must be within 48 hours of the booking date to receive
+          a full refund. (NOT 48 hours before picking up your vehicle on the reservation date.)
+          Cancellations after 48 hours of the booking date will receive a gift certificate towards
+          a future reservation.
+        </p>
+
+        <p>
+          Any cancellations due to Covid-19, city/state closures, or any type of pandemic issue,
+          will follow our standard company cancellation policy.
+        </p>
+
+        <p>
+          Deposits: We Require a minimum of $500 to $2000 USD deposit depending on the vehicle.
+          Deposits are fully refundable once the vehicle is inspected upon return. Deposits can
+          take 5-7 business days or sometimes longer depending on your banking system.
         </p>
 
         <h2>Locations</h2>

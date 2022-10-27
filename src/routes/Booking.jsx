@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint linebreak-style: ["error", "windows"] */
 import React, { useState } from 'react';
 import Button from '../components/button/Button';
@@ -11,20 +12,19 @@ const BookingScreen = () => {
   return (
     <div className="container page-booking">
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed interdum lorem.
-        Quisque sed eleifend urna, in mattis lectus. Integer eu nulla ut libero gravida maximus.
-        Nam tempor felis semper eros tristique dictum. Pellentesque in rutrum lorem, nec gravida
-        lacus. Donec ullamcorper turpis non nisi euismod, nec vulputate justo pulvinar. Morbi
-        quam magna, mattis dignissim blandit nec, rhoncus non dui.
+        Thank you for being interested in renting one of our exclusive vehicles that we have
+        for you at EXO Cars, it is important to consider the following before continuing with
+        your reservation:
       </p>
       <p>
-        Duis porta quis ligula sed volutpat. Maecenas ut neque sed ipsum eleifend feugiat.
-        Nullam id euismod quam. Nam eleifend, eros sit amet interdum maximus, lectus metus
-        tristique mi, sit amet fermentum dui nunc ut nibh. Praesent dapibus nisl leo, vitae
-        sodales erat finibus ut. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-        In accumsan tortor at sapien vehicula, at efficitur metus pulvinar. Nunc ornare ex ac
-        enim vulputate fringilla. Aliquam lacus purus, lacinia id dolor vel, dictum malesuada
-        orci. Morbi eleifend enim commodo arcu rhoncus blandit.
+        It is essential to have a valid driver's license at all times of the rental, if you
+        are a foreigner you must have a valid international driver's license.
+      </p>
+      <p>
+        For any rental you must make the reservation at least 48 hours in advance.
+      </p>
+      <p>
+        For any cancellation you can contact us and learn about our cancellation policies.
       </p>
 
       <Button
