@@ -1,0 +1,1666 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing component rednering propperly renders About screen 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="container page-about"
+      >
+        <div
+          class="info-container"
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed interdum lorem. Quisque sed eleifend urna, in mattis lectus. Integer eu nulla ut libero gravida maximus. Nam tempor felis semper eros tristique dictum. Pellentesque in rutrum lorem, nec gravida lacus. Donec ullamcorper turpis non nisi euismod, nec vulputate justo pulvinar. Morbi quam magna, mattis dignissim blandit nec, rhoncus non dui.
+          </p>
+          <p>
+            Duis porta quis ligula sed volutpat. Maecenas ut neque sed ipsum eleifend feugiat. Nullam id euismod quam. Nam eleifend, eros sit amet interdum maximus, lectus metus tristique mi, sit amet fermentum dui nunc ut nibh. Praesent dapibus nisl leo, vitae sodales erat finibus ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. In accumsan tortor at sapien vehicula, at efficitur metus pulvinar. Nunc ornare ex ac enim vulputate fringilla. Aliquam lacus purus, lacinia id dolor vel, dictum malesuada orci. Morbi eleifend enim commodo arcu rhoncus blandit.
+          </p>
+          <h2>
+            Locations
+          </h2>
+          <div
+            class="stores"
+          >
+            <div>
+              <p
+                class="no-margin-padding"
+              >
+                <strong>
+                  Bogota (COL)
+                </strong>
+              </p>
+              <p
+                class="no-margin-padding"
+              >
+                <small>
+                  Callr 116 554
+                </small>
+              </p>
+              <p>
+                <a
+                  href="tel:+57 (1) 752-5200"
+                >
+                  +57 (1) 752-5200
+                </a>
+              </p>
+            </div>
+            <div>
+              <p
+                class="no-margin-padding"
+              >
+                <strong>
+                  Hermosillo (MEX)
+                </strong>
+              </p>
+              <p
+                class="no-margin-padding"
+              >
+                <small>
+                  Blvd. Morelos 1054
+                </small>
+              </p>
+              <p>
+                <a
+                  href="tel:+52 (662) 260-5042"
+                >
+                  +52 (662) 260-5042
+                </a>
+              </p>
+            </div>
+            <div>
+              <p
+                class="no-margin-padding"
+              >
+                <strong>
+                  Manizalez (COL)
+                </strong>
+              </p>
+              <p
+                class="no-margin-padding"
+              >
+                <small>
+                  Cr21 23-19
+                </small>
+              </p>
+              <p>
+                <a
+                  href="tel:+57 (601) 705-0000"
+                >
+                  +57 (601) 705-0000
+                </a>
+              </p>
+            </div>
+            <div>
+              <p
+                class="no-margin-padding"
+              >
+                <strong>
+                  Sao Paulo (BRA)
+                </strong>
+              </p>
+              <p
+                class="no-margin-padding"
+              >
+                <small>
+                  Avenida dos Bandeirantes 423
+                </small>
+              </p>
+              <p>
+                <a
+                  href="tel:+55 (11) 122-5669"
+                >
+                  +55 (11) 122-5669
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="container page-about"
+    >
+      <div
+        class="info-container"
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed interdum lorem. Quisque sed eleifend urna, in mattis lectus. Integer eu nulla ut libero gravida maximus. Nam tempor felis semper eros tristique dictum. Pellentesque in rutrum lorem, nec gravida lacus. Donec ullamcorper turpis non nisi euismod, nec vulputate justo pulvinar. Morbi quam magna, mattis dignissim blandit nec, rhoncus non dui.
+        </p>
+        <p>
+          Duis porta quis ligula sed volutpat. Maecenas ut neque sed ipsum eleifend feugiat. Nullam id euismod quam. Nam eleifend, eros sit amet interdum maximus, lectus metus tristique mi, sit amet fermentum dui nunc ut nibh. Praesent dapibus nisl leo, vitae sodales erat finibus ut. Interdum et malesuada fames ac ante ipsum primis in faucibus. In accumsan tortor at sapien vehicula, at efficitur metus pulvinar. Nunc ornare ex ac enim vulputate fringilla. Aliquam lacus purus, lacinia id dolor vel, dictum malesuada orci. Morbi eleifend enim commodo arcu rhoncus blandit.
+        </p>
+        <h2>
+          Locations
+        </h2>
+        <div
+          class="stores"
+        >
+          <div>
+            <p
+              class="no-margin-padding"
+            >
+              <strong>
+                Bogota (COL)
+              </strong>
+            </p>
+            <p
+              class="no-margin-padding"
+            >
+              <small>
+                Callr 116 554
+              </small>
+            </p>
+            <p>
+              <a
+                href="tel:+57 (1) 752-5200"
+              >
+                +57 (1) 752-5200
+              </a>
+            </p>
+          </div>
+          <div>
+            <p
+              class="no-margin-padding"
+            >
+              <strong>
+                Hermosillo (MEX)
+              </strong>
+            </p>
+            <p
+              class="no-margin-padding"
+            >
+              <small>
+                Blvd. Morelos 1054
+              </small>
+            </p>
+            <p>
+              <a
+                href="tel:+52 (662) 260-5042"
+              >
+                +52 (662) 260-5042
+              </a>
+            </p>
+          </div>
+          <div>
+            <p
+              class="no-margin-padding"
+            >
+              <strong>
+                Manizalez (COL)
+              </strong>
+            </p>
+            <p
+              class="no-margin-padding"
+            >
+              <small>
+                Cr21 23-19
+              </small>
+            </p>
+            <p>
+              <a
+                href="tel:+57 (601) 705-0000"
+              >
+                +57 (601) 705-0000
+              </a>
+            </p>
+          </div>
+          <div>
+            <p
+              class="no-margin-padding"
+            >
+              <strong>
+                Sao Paulo (BRA)
+              </strong>
+            </p>
+            <p
+              class="no-margin-padding"
+            >
+              <small>
+                Avenida dos Bandeirantes 423
+              </small>
+            </p>
+            <p>
+              <a
+                href="tel:+55 (11) 122-5669"
+              >
+                +55 (11) 122-5669
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Testing component rednering propperly renders Login screen 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="container page-login"
+      >
+        <form
+          action="#"
+          class="login-form"
+          method="POST"
+        >
+          <h2>
+            LOGIN
+          </h2>
+          <div
+            class="add-padding-below"
+          >
+            <span
+              class="error-message"
+            >
+              Error with credentials
+            </span>
+            <input
+              class="form-field"
+              id="name"
+              name="name"
+              placeholder="Name"
+              required=""
+              type="text"
+            />
+          </div>
+          <div
+            class="add-padding-below"
+          >
+            <input
+              class="form-field"
+              id="password"
+              name="password"
+              placeholder="Password"
+              required=""
+              type="text"
+            />
+          </div>
+          <p
+            class="signin-message"
+          >
+            Don't have an account yet?
+            <a
+              href="/signup"
+            >
+              SIGN UP
+            </a>
+          </p>
+          <div
+            class="form-bottom-bar"
+          >
+            <button
+              class="main color-dark"
+              type="button"
+            >
+              Login
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="container page-login"
+    >
+      <form
+        action="#"
+        class="login-form"
+        method="POST"
+      >
+        <h2>
+          LOGIN
+        </h2>
+        <div
+          class="add-padding-below"
+        >
+          <span
+            class="error-message"
+          >
+            Error with credentials
+          </span>
+          <input
+            class="form-field"
+            id="name"
+            name="name"
+            placeholder="Name"
+            required=""
+            type="text"
+          />
+        </div>
+        <div
+          class="add-padding-below"
+        >
+          <input
+            class="form-field"
+            id="password"
+            name="password"
+            placeholder="Password"
+            required=""
+            type="text"
+          />
+        </div>
+        <p
+          class="signin-message"
+        >
+          Don't have an account yet?
+          <a
+            href="/signup"
+          >
+            SIGN UP
+          </a>
+        </p>
+        <div
+          class="form-bottom-bar"
+        >
+          <button
+            class="main color-dark"
+            type="button"
+          >
+            Login
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Testing component rednering propperly renders Navbar component 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="menuMobile"
+      >
+        <svg
+          class="icon"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 448 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+          />
+        </svg>
+      </div>
+      <div
+        class="navbar nav-show"
+      >
+        <div
+          class="closeBtn"
+        >
+          <svg
+            class="icon"
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 352 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+            />
+          </svg>
+        </div>
+        <div
+          class="navTop"
+        >
+          <a
+            class="img-container"
+            href="/"
+          />
+          <nav>
+            <ul>
+              <li>
+                <a
+                  class=""
+                  href="/models"
+                >
+                  MODELS
+                </a>
+              </li>
+              <li>
+                <a
+                  class=""
+                  href="/reservation"
+                >
+                  RESERVATIONS
+                </a>
+              </li>
+              <li>
+                <a
+                  class=""
+                  href="/booking"
+                >
+                  BOOKING
+                </a>
+              </li>
+              <li>
+                <a
+                  class=""
+                  href="/about"
+                >
+                  ABOUT
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div
+          class="social-icons"
+        >
+          <ul>
+            <li>
+              <svg
+                class="icon"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                />
+              </svg>
+            </li>
+            <li>
+              <svg
+                class="icon"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 320 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                />
+              </svg>
+            </li>
+            <li>
+              <svg
+                class="icon"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 640 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M386.061 228.496c1.834 9.692 3.143 19.384 3.143 31.956C389.204 370.205 315.599 448 204.8 448c-106.084 0-192-85.915-192-192s85.916-192 192-192c51.864 0 95.083 18.859 128.611 50.292l-52.126 50.03c-14.145-13.621-39.028-29.599-76.485-29.599-65.484 0-118.92 54.221-118.92 121.277 0 67.056 53.436 121.277 118.92 121.277 75.961 0 104.513-54.745 108.965-82.773H204.8v-66.009h181.261zm185.406 6.437V179.2h-56.001v55.733h-55.733v56.001h55.733v55.733h56.001v-55.733H627.2v-56.001h-55.733z"
+                />
+              </svg>
+            </li>
+            <li>
+              <svg
+                class="icon"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 384 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M204 6.5C101.4 6.5 0 74.9 0 185.6 0 256 39.6 296 63.6 296c9.9 0 15.6-27.6 15.6-35.4 0-9.3-23.7-29.1-23.7-67.8 0-80.4 61.2-137.4 140.4-137.4 68.1 0 118.5 38.7 118.5 109.8 0 53.1-21.3 152.7-90.3 152.7-24.9 0-46.2-18-46.2-43.8 0-37.8 26.4-74.4 26.4-113.4 0-66.2-93.9-54.2-93.9 25.8 0 16.8 2.1 35.4 9.6 50.7-13.8 59.4-42 147.9-42 209.1 0 18.9 2.7 37.5 4.5 56.4 3.4 3.8 1.7 3.4 6.9 1.5 50.4-69 48.6-82.5 71.4-172.8 12.3 23.4 44.1 36 69.3 36 106.2 0 153.9-103.5 153.9-196.8C384 71.3 298.2 6.5 204 6.5z"
+                />
+              </svg>
+            </li>
+          </ul>
+          <p>
+            Microverse Copyright 2022
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="menuMobile"
+    >
+      <svg
+        class="icon"
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 448 512"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+        />
+      </svg>
+    </div>
+    <div
+      class="navbar nav-show"
+    >
+      <div
+        class="closeBtn"
+      >
+        <svg
+          class="icon"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 352 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+          />
+        </svg>
+      </div>
+      <div
+        class="navTop"
+      >
+        <a
+          class="img-container"
+          href="/"
+        />
+        <nav>
+          <ul>
+            <li>
+              <a
+                class=""
+                href="/models"
+              >
+                MODELS
+              </a>
+            </li>
+            <li>
+              <a
+                class=""
+                href="/reservation"
+              >
+                RESERVATIONS
+              </a>
+            </li>
+            <li>
+              <a
+                class=""
+                href="/booking"
+              >
+                BOOKING
+              </a>
+            </li>
+            <li>
+              <a
+                class=""
+                href="/about"
+              >
+                ABOUT
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div
+        class="social-icons"
+      >
+        <ul>
+          <li>
+            <svg
+              class="icon"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+              />
+            </svg>
+          </li>
+          <li>
+            <svg
+              class="icon"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 320 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+              />
+            </svg>
+          </li>
+          <li>
+            <svg
+              class="icon"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 640 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M386.061 228.496c1.834 9.692 3.143 19.384 3.143 31.956C389.204 370.205 315.599 448 204.8 448c-106.084 0-192-85.915-192-192s85.916-192 192-192c51.864 0 95.083 18.859 128.611 50.292l-52.126 50.03c-14.145-13.621-39.028-29.599-76.485-29.599-65.484 0-118.92 54.221-118.92 121.277 0 67.056 53.436 121.277 118.92 121.277 75.961 0 104.513-54.745 108.965-82.773H204.8v-66.009h181.261zm185.406 6.437V179.2h-56.001v55.733h-55.733v56.001h55.733v55.733h56.001v-55.733H627.2v-56.001h-55.733z"
+              />
+            </svg>
+          </li>
+          <li>
+            <svg
+              class="icon"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 384 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M204 6.5C101.4 6.5 0 74.9 0 185.6 0 256 39.6 296 63.6 296c9.9 0 15.6-27.6 15.6-35.4 0-9.3-23.7-29.1-23.7-67.8 0-80.4 61.2-137.4 140.4-137.4 68.1 0 118.5 38.7 118.5 109.8 0 53.1-21.3 152.7-90.3 152.7-24.9 0-46.2-18-46.2-43.8 0-37.8 26.4-74.4 26.4-113.4 0-66.2-93.9-54.2-93.9 25.8 0 16.8 2.1 35.4 9.6 50.7-13.8 59.4-42 147.9-42 209.1 0 18.9 2.7 37.5 4.5 56.4 3.4 3.8 1.7 3.4 6.9 1.5 50.4-69 48.6-82.5 71.4-172.8 12.3 23.4 44.1 36 69.3 36 106.2 0 153.9-103.5 153.9-196.8C384 71.3 298.2 6.5 204 6.5z"
+              />
+            </svg>
+          </li>
+        </ul>
+        <p>
+          Microverse Copyright 2022
+        </p>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Testing component rednering propperly renders New screen 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="container page-admin"
+      >
+        <div
+          class="info-container"
+        >
+          <h1>
+            Add new car
+          </h1>
+          <form
+            method="post"
+          >
+            <fragment>
+              <div
+                class="grid-display grid-simple"
+              >
+                <div
+                  class="add-margin-below"
+                >
+                  <label
+                    for="brand"
+                  >
+                    Brand
+                  </label>
+                  <input
+                    class="form-field"
+                    id="brand"
+                    name="brand"
+                    placeholder="Ferrari"
+                    required=""
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div
+                class="grid-display grid-double"
+              >
+                <div
+                  class="add-margin-below"
+                >
+                  <label
+                    for="brand"
+                  >
+                    Model
+                  </label>
+                  <input
+                    class="form-field"
+                    id="model"
+                    name="model"
+                    placeholder="Testarossa"
+                    required=""
+                    type="text"
+                  />
+                </div>
+                <div
+                  class="add-margin-below grid-double"
+                >
+                  <label
+                    for="year"
+                  >
+                    Year
+                  </label>
+                  <input
+                    class="form-field"
+                    id="year"
+                    name="year"
+                    placeholder="2018"
+                    required=""
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div
+                class="grid-display grid-double"
+              >
+                <div
+                  class="add-margin-below grid-double"
+                >
+                  <label
+                    for="country"
+                  >
+                    Country
+                  </label>
+                  <input
+                    class="form-field"
+                    id="country"
+                    name="country"
+                    placeholder="Italia"
+                    required=""
+                    type="text"
+                  />
+                </div>
+                <div
+                  class="add-margin-below"
+                >
+                  <label
+                    for="color"
+                  >
+                    Color
+                  </label>
+                  <select
+                    class="form-field"
+                    name="color"
+                    required=""
+                  >
+                    <option
+                      value=""
+                    >
+                      Select one
+                    </option>
+                    <option
+                      value="Black"
+                    >
+                      Black
+                    </option>
+                    <option
+                      value="Blue"
+                    >
+                      Blue
+                    </option>
+                    <option
+                      value="Brown"
+                    >
+                      Brown
+                    </option>
+                    <option
+                      value="Carbon"
+                    >
+                      Carbon
+                    </option>
+                    <option
+                      value="Green"
+                    >
+                      Green
+                    </option>
+                    <option
+                      value="Orange"
+                    >
+                      Orange
+                    </option>
+                    <option
+                      value="Red"
+                    >
+                      Red
+                    </option>
+                    <option
+                      value="Silver"
+                    >
+                      Silver
+                    </option>
+                    <option
+                      value="Yellow"
+                    >
+                      Yellow
+                    </option>
+                    <option
+                      value="White"
+                    >
+                      White
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <h3>
+                Technical Specs
+              </h3>
+              <div
+                class="grid-display grid-cuadra"
+              >
+                <div
+                  class="add-margin-below"
+                >
+                  <label
+                    for="power"
+                  >
+                    Power
+                  </label>
+                  <input
+                    class="form-field"
+                    id="power"
+                    name="power"
+                    placeholder="780 CV (574 kW)"
+                    required=""
+                    type="text"
+                  />
+                </div>
+                <div
+                  class="add-margin-below"
+                >
+                  <label
+                    for="maxSpeed"
+                  >
+                    Max Speed
+                  </label>
+                  <input
+                    class="form-field"
+                    id="maxSpeed"
+                    name="maxSpeed"
+                    placeholder="355 km/h"
+                    required=""
+                    type="text"
+                  />
+                </div>
+                <div
+                  class="add-margin-below"
+                >
+                  <label
+                    for="acceleration"
+                  >
+                    Acceleration
+                  </label>
+                  <input
+                    class="form-field"
+                    id="acceleration"
+                    name="acceleration"
+                    placeholder="9.8s"
+                    required=""
+                    type="text"
+                  />
+                </div>
+                <div
+                  class="add-margin-below"
+                >
+                  <label
+                    for="price"
+                  >
+                    Price(USD)
+                  </label>
+                  <input
+                    class="form-field"
+                    id="price"
+                    name="price"
+                    placeholder="100"
+                    required=""
+                    type="text"
+                  />
+                </div>
+              </div>
+              <h3>
+                Description
+              </h3>
+              <div
+                class="add-margin-below"
+              >
+                <textarea
+                  class="form-field"
+                  name="description"
+                  required=""
+                />
+              </div>
+            </fragment>
+            <div
+              class="grid-flex"
+            >
+              <a
+                href="/admin"
+              >
+                Back to admin
+              </a>
+              <button
+                type="submit"
+              >
+                Save
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="container page-admin"
+    >
+      <div
+        class="info-container"
+      >
+        <h1>
+          Add new car
+        </h1>
+        <form
+          method="post"
+        >
+          <fragment>
+            <div
+              class="grid-display grid-simple"
+            >
+              <div
+                class="add-margin-below"
+              >
+                <label
+                  for="brand"
+                >
+                  Brand
+                </label>
+                <input
+                  class="form-field"
+                  id="brand"
+                  name="brand"
+                  placeholder="Ferrari"
+                  required=""
+                  type="text"
+                />
+              </div>
+            </div>
+            <div
+              class="grid-display grid-double"
+            >
+              <div
+                class="add-margin-below"
+              >
+                <label
+                  for="brand"
+                >
+                  Model
+                </label>
+                <input
+                  class="form-field"
+                  id="model"
+                  name="model"
+                  placeholder="Testarossa"
+                  required=""
+                  type="text"
+                />
+              </div>
+              <div
+                class="add-margin-below grid-double"
+              >
+                <label
+                  for="year"
+                >
+                  Year
+                </label>
+                <input
+                  class="form-field"
+                  id="year"
+                  name="year"
+                  placeholder="2018"
+                  required=""
+                  type="text"
+                />
+              </div>
+            </div>
+            <div
+              class="grid-display grid-double"
+            >
+              <div
+                class="add-margin-below grid-double"
+              >
+                <label
+                  for="country"
+                >
+                  Country
+                </label>
+                <input
+                  class="form-field"
+                  id="country"
+                  name="country"
+                  placeholder="Italia"
+                  required=""
+                  type="text"
+                />
+              </div>
+              <div
+                class="add-margin-below"
+              >
+                <label
+                  for="color"
+                >
+                  Color
+                </label>
+                <select
+                  class="form-field"
+                  name="color"
+                  required=""
+                >
+                  <option
+                    value=""
+                  >
+                    Select one
+                  </option>
+                  <option
+                    value="Black"
+                  >
+                    Black
+                  </option>
+                  <option
+                    value="Blue"
+                  >
+                    Blue
+                  </option>
+                  <option
+                    value="Brown"
+                  >
+                    Brown
+                  </option>
+                  <option
+                    value="Carbon"
+                  >
+                    Carbon
+                  </option>
+                  <option
+                    value="Green"
+                  >
+                    Green
+                  </option>
+                  <option
+                    value="Orange"
+                  >
+                    Orange
+                  </option>
+                  <option
+                    value="Red"
+                  >
+                    Red
+                  </option>
+                  <option
+                    value="Silver"
+                  >
+                    Silver
+                  </option>
+                  <option
+                    value="Yellow"
+                  >
+                    Yellow
+                  </option>
+                  <option
+                    value="White"
+                  >
+                    White
+                  </option>
+                </select>
+              </div>
+            </div>
+            <h3>
+              Technical Specs
+            </h3>
+            <div
+              class="grid-display grid-cuadra"
+            >
+              <div
+                class="add-margin-below"
+              >
+                <label
+                  for="power"
+                >
+                  Power
+                </label>
+                <input
+                  class="form-field"
+                  id="power"
+                  name="power"
+                  placeholder="780 CV (574 kW)"
+                  required=""
+                  type="text"
+                />
+              </div>
+              <div
+                class="add-margin-below"
+              >
+                <label
+                  for="maxSpeed"
+                >
+                  Max Speed
+                </label>
+                <input
+                  class="form-field"
+                  id="maxSpeed"
+                  name="maxSpeed"
+                  placeholder="355 km/h"
+                  required=""
+                  type="text"
+                />
+              </div>
+              <div
+                class="add-margin-below"
+              >
+                <label
+                  for="acceleration"
+                >
+                  Acceleration
+                </label>
+                <input
+                  class="form-field"
+                  id="acceleration"
+                  name="acceleration"
+                  placeholder="9.8s"
+                  required=""
+                  type="text"
+                />
+              </div>
+              <div
+                class="add-margin-below"
+              >
+                <label
+                  for="price"
+                >
+                  Price(USD)
+                </label>
+                <input
+                  class="form-field"
+                  id="price"
+                  name="price"
+                  placeholder="100"
+                  required=""
+                  type="text"
+                />
+              </div>
+            </div>
+            <h3>
+              Description
+            </h3>
+            <div
+              class="add-margin-below"
+            >
+              <textarea
+                class="form-field"
+                name="description"
+                required=""
+              />
+            </div>
+          </fragment>
+          <div
+            class="grid-flex"
+          >
+            <a
+              href="/admin"
+            >
+              Back to admin
+            </a>
+            <button
+              type="submit"
+            >
+              Save
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Testing component rednering propperly renders Signup screen 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="container page-login"
+      >
+        <form
+          action="#"
+          class="login-form"
+          id="signup-form"
+          method="POST"
+        >
+          <h2>
+            SIGNUP
+          </h2>
+          <div
+            class="add-padding-below"
+          >
+            <span
+              class="error-message"
+            >
+              This username or email already exists 
+            </span>
+            <input
+              class="form-field"
+              id="name"
+              name="name"
+              placeholder="Name"
+              required=""
+              type="text"
+            />
+          </div>
+          <div
+            class="add-padding-below"
+          >
+            <input
+              class="form-field"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required=""
+              type="email"
+            />
+          </div>
+          <div
+            class="add-padding-below"
+          >
+            <input
+              class="form-field"
+              id="password"
+              name="password"
+              placeholder="Password"
+              required=""
+              type="text"
+            />
+          </div>
+          <p
+            class="signin-message"
+          >
+            Already have an account?
+            <a
+              href="/login"
+            >
+              LOGIN
+            </a>
+          </p>
+          <div
+            class="form-bottom-bar"
+          >
+            <button
+              class="main color-dark"
+              type="button"
+            >
+              Signup
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="container page-login"
+    >
+      <form
+        action="#"
+        class="login-form"
+        id="signup-form"
+        method="POST"
+      >
+        <h2>
+          SIGNUP
+        </h2>
+        <div
+          class="add-padding-below"
+        >
+          <span
+            class="error-message"
+          >
+            This username or email already exists 
+          </span>
+          <input
+            class="form-field"
+            id="name"
+            name="name"
+            placeholder="Name"
+            required=""
+            type="text"
+          />
+        </div>
+        <div
+          class="add-padding-below"
+        >
+          <input
+            class="form-field"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required=""
+            type="email"
+          />
+        </div>
+        <div
+          class="add-padding-below"
+        >
+          <input
+            class="form-field"
+            id="password"
+            name="password"
+            placeholder="Password"
+            required=""
+            type="text"
+          />
+        </div>
+        <p
+          class="signin-message"
+        >
+          Already have an account?
+          <a
+            href="/login"
+          >
+            LOGIN
+          </a>
+        </p>
+        <div
+          class="form-bottom-bar"
+        >
+          <button
+            class="main color-dark"
+            type="button"
+          >
+            Signup
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
