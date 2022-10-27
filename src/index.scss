@@ -183,6 +183,8 @@ h1 {
   }
 
   p {
+    padding: $padding;
+    background-color: rgba($color-white, 0.5);
     line-height: 1.1em;
     text-align: end;
   }
