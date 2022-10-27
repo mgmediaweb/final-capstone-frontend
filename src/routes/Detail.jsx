@@ -12,6 +12,11 @@ const DetailScreen = () => {
   const defaultImage = 'https://firebasestorage.googleapis.com/v0/b/exo-cars-5611d.appspot.com/o/empty_car.jpg?alt=media&token=952474fe-a836-4a2e-8576-6961aac8d7e3';
   const { id } = useParams();
   const vehicles = useSelector((state) => state.vehicles);
+
+  if (vehicles.length === 0) {
+    window.location.href = '/models';
+  }
+
   const car = vehicles.find((element) => element.id === parseInt(id, 10));
   const gallery = car.galleries;
   const [background, setBackground] = useState(gallery.length ? gallery[0].photo : defaultImage);

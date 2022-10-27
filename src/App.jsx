@@ -11,7 +11,6 @@ import AboutScreen from './routes/About';
 import AdminScreen from './routes/admin/Admin';
 import BookingScreen from './routes/Booking';
 import DetailScreen from './routes/Detail';
-import EditScreen from './routes/admin/Edit';
 import HomeScreen from './routes/Home';
 import NewScreen from './routes/admin/New';
 import ReservationScreen from './routes/Reservation';
@@ -39,7 +38,6 @@ function App() {
         <Route element={<ProtectedRoutes />}>
           <Route element={<AdminScreen />} path="/admin" />
           <Route element={<NewScreen />} path="/admin/new" />
-          <Route element={<EditScreen />} path="/admin/edit/:id" />
           <Route element={<AboutScreen />} path="/about" />
           <Route element={<BookingScreen />} path="/booking" />
           <Route element={<DetailScreen />} path="/models/:id" />
