@@ -24,9 +24,8 @@ const ReservationScreen = () => {
       <div className="info-container">
         <h2>{`${JSON.parse(localStorage.getItem('current_user')).name}'s reservations`}</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed interdum lorem.
-          Quisque sed eleifend urna, in mattis lectus. Integer eu nulla ut libero gravida maximus.
-          quam magna, mattis dignissim blandit nec, rhoncus non dui.
+          Know all future and past reservations made by you, know the selected vehicle
+          and the date range you chose.
         </p>
 
         {(reservations.length === 0) && (

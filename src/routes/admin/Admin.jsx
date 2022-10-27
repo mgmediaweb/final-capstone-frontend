@@ -27,14 +27,15 @@ const AdminScreen = () => {
 
   const addVehicle = () => navigate('/admin/new', { replace: true }, [navigate]);
 
-  const deleteVehicle = async (id) => {
+  const deleteVehicle = async (vehicle) => {
     const deleteCar = {
       method: 'DELETE',
       headers: {
         Authorization: JSON.parse(localStorage.getItem('current_user')).token,
       },
     };
-    await fetch(`https://elsonotake-backend.herokuapp.com/api/v1/vehicles/${id}`, deleteCar);
+
+    await fetch(`https://elsonotake-backend.herokuapp.com/api/v1/vehicles/${vehicle.id}`, deleteCar);
     window.location.href = '/models';
   };
 
@@ -71,7 +72,7 @@ const AdminScreen = () => {
                 <Button
                   btnAxn={deleteVehicle}
                   label="Delete"
-                  value={car.id}
+                  value={{ id: car.id }}
                   size="small"
                 />
               </div>
