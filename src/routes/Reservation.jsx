@@ -25,7 +25,7 @@ const ReservationScreen = () => {
         <h2>{`${JSON.parse(localStorage.getItem('current_user')).name}'s reservations`}</h2>
         <p>
           Know all future and past reservations made by you, know the selected vehicle
-          and the date range you chose.
+          and the date range you choose.
         </p>
 
         {(reservations.length === 0) && (
