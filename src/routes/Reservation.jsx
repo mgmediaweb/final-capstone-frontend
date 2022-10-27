@@ -11,15 +11,12 @@ const ReservationScreen = () => {
   const defaultImage = 'https://firebasestorage.googleapis.com/v0/b/exo-cars-5611d.appspot.com/o/empty_car.jpg?alt=media&token=952474fe-a836-4a2e-8576-6961aac8d7e3';
 
   const getVehicle = (vehicleId) => {
-    console.log(vehicleId);
-    console.log(vehicles);
     const vehicle = vehicles.find((vehicle) => vehicle.id === vehicleId);
-    console.log(vehicle);
     return vehicle;
   };
 
   useEffect(() => {
-    setIsVehicle(true);
+    if (vehicles.length) setIsVehicle(true);
   }, [vehicles]);
 
   return (
