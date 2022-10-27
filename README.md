@@ -3,14 +3,18 @@
 # FINAL CAPSTONE (FRONT END)
 In this project, we created a website for renting exotic cars (exo-cars). It fetches data from an API we also created and deployed on Heroku. It allows users to register with token validation, see the available cars and make reservations. Admins are allowed to add and remove cars from the database. 
 
+<img src="./public/assets/images/homepage.png" alt="homepage" width="300" style="border: black solid 1px"/>
+<img src="./public/assets/images/detailspage.png" alt="detailspage" width="300" style="border: black solid 1px"/>
+
 ## Built With
 
 - REACT JS.
 - REACT ROUTER.
 - REDUX TOOLKIT.
-- REACT SLICK.
+- JEST
+### Live demo
 
-### Setup
+[EXO-CARS](https://exo-cars.herokuapp.com)
 
 ### Install
 
