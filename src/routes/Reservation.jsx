@@ -1,19 +1,26 @@
 /* eslint linebreak-style: ["error", "windows"] */
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { useState, useEffect } from 'react';
 
 const ReservationScreen = () => {
   const vehicles = useSelector((state) => state.vehicles);
   const reservations = useSelector((state) => state.reservations);
+  const [isVehicle, setIsVehicle] = useState(false);
 
-  if (vehicles.length === 0 || reservations.length === 0) {
-    window.location.href = '/models';
-  }
+  const defaultImage = 'https://firebasestorage.googleapis.com/v0/b/exo-cars-5611d.appspot.com/o/empty_car.jpg?alt=media&token=952474fe-a836-4a2e-8576-6961aac8d7e3';
 
   const getVehicle = (vehicleId) => {
+    console.log(vehicleId);
+    console.log(vehicles);
     const vehicle = vehicles.find((vehicle) => vehicle.id === vehicleId);
+    console.log(vehicle);
     return vehicle;
   };
+
+  useEffect(() => {
+    setIsVehicle(true);
+  }, [vehicles]);
 
   return (
     <div className="container page-reservation">
@@ -30,15 +37,16 @@ const ReservationScreen = () => {
         )}
 
         {
-          reservations.map((item) => (
+          isVehicle && reservations.map((item) => (
             <article key={item.id}>
               <div className="main-info">
+
                 <Link to={`/models/${item.vehicle_id}`}>
                   <div className="reservation-photo">
                     <img
                       src={getVehicle(item.vehicle_id).galleries.length
                         ? getVehicle(item.vehicle_id).galleries[0].photo
-                        : 'https://e7.pngegg.com/pngimages/935/767/png-clipart-silhouette-racing-car-silhouette-racing-car-commercial-carnivoran-photography-thumbnail.png'}
+                        : defaultImage}
                       alt="vehicle"
                     />
                   </div>
@@ -47,6 +55,7 @@ const ReservationScreen = () => {
                   <h4>{getVehicle(item.vehicle_id).brand}</h4>
                   <h2 className="reservation-model">{getVehicle(item.vehicle_id).model}</h2>
                 </div>
+
               </div>
               <div className="text-end">
                 <p>{item.city}</p>

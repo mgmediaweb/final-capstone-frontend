@@ -4,6 +4,8 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import Navbar from './components/navbar/Navbar';
 import AboutScreen from './routes/About';
 import AdminScreen from './routes/admin/Admin';
@@ -16,8 +18,17 @@ import ReservationScreen from './routes/Reservation';
 import LoginScreen from './routes/Login';
 import SignupScreen from './routes/Signup';
 import ProtectedRoutes from './routes/ProtectedRoutes';
+import { getVehicles } from './redux/vehicles/vehicles';
+import { getReservations } from './redux/users/users';
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getReservations());
+    dispatch(getVehicles());
+  }, []);
+
   return (
     <Router>
       <Navbar />

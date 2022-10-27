@@ -24,7 +24,6 @@ const Booking = (props) => {
   const user = JSON.parse(localStorage.getItem('current_user')).id;
   const car = useSelector((state) => state.vehicles);
   let carPrice = 0;
-
   const dateStart = useRef();
   const dateEnd = useRef();
   const vehicles = useRef();

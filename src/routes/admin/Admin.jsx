@@ -12,10 +12,6 @@ const AdminScreen = () => {
   const [vehicleSelected, setvehicleSelected] = useState({ id: 0, model: 'undefined' });
   const [isIntruder, setIsIntruder] = useState(true);
 
-  if (vehicles.length === 0) {
-    window.location.href = '/models';
-  }
-
   useEffect(() => {
     if (JSON.parse(localStorage.getItem('current_user')).role === 'admin') {
       setIsIntruder(false);
