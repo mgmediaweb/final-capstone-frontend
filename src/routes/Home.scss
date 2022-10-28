@@ -8,7 +8,7 @@
 
   .cars-header {
     width: fit-content;
-    margin: 15% auto 0 auto;
+    margin: 100px auto 0 auto;
     text-align: center;
 
     h1 {
@@ -19,6 +19,10 @@
     p {
       color: gray;
     }
+  }
+
+  .cars-container {
+    height: fit-content;
   }
 
   .car-slider {

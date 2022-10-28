@@ -16,7 +16,7 @@ function CarCard({
         <h2>{brand}</h2>
         <h2>{model}</h2>
         <hr className="division-span" />
-        <p>{description}</p>
+        <p className="car-description">{description}</p>
 
       </div>
     </li>

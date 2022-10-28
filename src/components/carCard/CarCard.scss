@@ -2,7 +2,7 @@
 
 .car-card {
   @include flex-center(column);
-
+  height: fit-content;
   text-align: center;
   width: 100%;
   padding: $padding;
@@ -28,8 +28,10 @@
       }
     }
 
-    p {
+    .car-description {
       color: gray;
+      height: 150px;
+      overflow-y: scroll;
     }
   }
 
