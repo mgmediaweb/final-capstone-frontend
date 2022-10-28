@@ -72,6 +72,16 @@ const AboutScreen = () => {
             ))
           }
         </div>
+
+        <p>
+          <strong>
+            See more details about our API, that was developed for this project on Ruby on Rails
+            {' '}
+            <a href="https://elsonotake-backend.herokuapp.com/api-docs/index.html" rel="noreferrer" target="_blank">here</a>
+            .
+          </strong>
+        </p>
+
       </div>
     </div>
   );
