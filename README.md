@@ -1,7 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # FINAL CAPSTONE (FRONT END)
-In this project, we created a website for renting exotic cars (exo-cars). It fetches data from an API we also created and deployed on Heroku. It allows users to register with token validation, see the available cars and make reservations. Admins are allowed to add and remove cars from the database. 
+
+In this project, we created a website for renting exotic cars (exo-cars). It fetches data from an API we also created and deployed on Heroku. It allows users to register with token validation, see the available cars and make reservations. Admins are allowed to add and remove cars from the database.
 
 <img src="./public/assets/images/homepage.png" alt="homepage" width="300" style="border: black solid 1px"/>
 <img src="./public/assets/images/detailspage.png" alt="detailspage" width="300" style="border: black solid 1px"/>
@@ -12,6 +13,7 @@ In this project, we created a website for renting exotic cars (exo-cars). It fet
 - REACT ROUTER.
 - REDUX TOOLKIT.
 - JEST
+
 ### Live demo
 
 [EXO-CARS](https://exo-cars.herokuapp.com)
@@ -32,7 +34,7 @@ To view this document on your local computer:
 
 ### Run tests
 
-- Jest
+`- npm run test`
 
 ## Authors
 

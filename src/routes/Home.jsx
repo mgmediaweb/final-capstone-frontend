@@ -10,7 +10,7 @@ import CarCard from '../components/carCard/CarCard';
 import { getVehicles } from '../redux/vehicles/vehicles';
 import { getReservations } from '../redux/users/users';
 
-function Home() {
+const Home = () => {
   const defaultImage = 'https://firebasestorage.googleapis.com/v0/b/exo-cars-5611d.appspot.com/o/empty_car.jpg?alt=media&token=952474fe-a836-4a2e-8576-6961aac8d7e3';
   const dispatch = useDispatch();
   const vehicles = useSelector((state) => state.vehicles);
@@ -70,6 +70,6 @@ function Home() {
       </div>
     </div>
   );
-}
+};
 
 export default Home;

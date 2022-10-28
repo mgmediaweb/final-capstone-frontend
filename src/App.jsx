@@ -20,7 +20,7 @@ import ProtectedRoutes from './routes/ProtectedRoutes';
 import { getVehicles } from './redux/vehicles/vehicles';
 import { getReservations } from './redux/users/users';
 
-function App() {
+const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -57,6 +57,6 @@ function App() {
       </Routes>
     </Router>
   );
-}
+};
 
 export default App;

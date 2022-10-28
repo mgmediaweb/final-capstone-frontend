@@ -4,9 +4,9 @@ import './CarCard.scss';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-function CarCard({
+const CarCard = ({
   brand, model, description, image, id,
-}) {
+}) => {
   let showDescription = description;
   const maxChars = 110;
 
@@ -26,7 +26,7 @@ function CarCard({
       </div>
     </li>
   );
-}
+};
 
 CarCard.propTypes = {
   brand: PropTypes.string.isRequired,

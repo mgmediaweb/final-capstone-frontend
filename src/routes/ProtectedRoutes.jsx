@@ -10,13 +10,13 @@ const useAuth = () => {
   return user && user.loggedIn;
 };
 
-function ProtectedRoutes() {
+const ProtectedRoutes = () => {
   const isAuth = useAuth();
   return (
 
     isAuth ? <Outlet /> : <Navigate to="/login" />
 
   );
-}
+};
 
 export default ProtectedRoutes;

@@ -4,7 +4,7 @@ import { useRef, useState } from 'react';
 import Button from '../components/button/Button';
 import './Login.scss';
 
-function LoginScreen() {
+const LoginScreen = () => {
   const loginForm = useRef();
   const name = useRef();
   const password = useRef();
@@ -88,5 +88,6 @@ function LoginScreen() {
 
     </div>
   );
-}
+};
+
 export default LoginScreen;

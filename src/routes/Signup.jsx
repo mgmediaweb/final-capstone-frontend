@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Button from '../components/button/Button';
 import './Login.scss';
 
-function Signup() {
+const Signup = () => {
   const name = useRef();
   const email = useRef();
   const password = useRef();
@@ -113,6 +113,6 @@ function Signup() {
 
     </div>
   );
-}
+};
 
 export default Signup;
