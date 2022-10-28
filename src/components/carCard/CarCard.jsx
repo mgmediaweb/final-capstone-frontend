@@ -7,6 +7,11 @@ import { Link } from 'react-router-dom';
 function CarCard({
   brand, model, description, image, id,
 }) {
+  let showDescription = description;
+  const maxChars = 110;
+
+  if (showDescription.length > maxChars) showDescription = `${showDescription.slice(0, maxChars).trim()}...`;
+
   return (
     <li className="car-card">
       <div className="card-container">
@@ -16,7 +21,7 @@ function CarCard({
         <h2>{brand}</h2>
         <h2>{model}</h2>
         <hr className="division-span" />
-        <p className="car-description">{description}</p>
+        <p className="car-description">{showDescription}</p>
 
       </div>
     </li>
