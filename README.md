@@ -7,6 +7,9 @@ In this project, we created a website for renting exotic cars (exo-cars). It fet
 <img src="./public/assets/images/homepage.png" alt="homepage" width="300" style="border: black solid 1px"/>
 <img src="./public/assets/images/detailspage.png" alt="detailspage" width="300" style="border: black solid 1px"/>
 
+## Back-end REPO
+[Final_capstone_backend](https://github.com/ElsonOtake/Final_capstone_backend)
+
 ## Built With
 
 - REACT JS.
