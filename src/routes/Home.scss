@@ -1,0 +1,56 @@
+@import "../config.scss";
+
+.home-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: $spacer;
+
+  .cars-header {
+    width: fit-content;
+    margin: 100px auto 0 auto;
+    text-align: center;
+
+    h1 {
+      color: $color-dark;
+      line-height: 1;
+    }
+
+    p {
+      color: gray;
+    }
+  }
+
+  .car-slider {
+    margin: 0% auto 0 auto;
+    width: calc(100% - 14rem);
+  }
+
+  .slick-arrow {
+    color: black;
+    height: 4rem;
+    width: 6rem;
+    background-color: $color-primary;
+
+    &.slick-prev {
+      border-radius: 0 2rem 2rem 0;
+      left: -7rem;
+    }
+
+    &.slick-next {
+      border-radius: 2rem 0 0 2rem;
+      right: -7rem;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .slick-arrow {
+    display: none !important;
+  }
+
+  .car-slider {
+    margin: 0;
+    width: 100% !important;
+  }
+}

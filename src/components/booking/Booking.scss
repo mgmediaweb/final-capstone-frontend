@@ -1,0 +1,79 @@
+@import "../../config.scss";
+
+.booking {
+  background-color: $color-primary;
+  box-shadow: 0 0 15px 0 rgba($color-dark, 0.33);
+  color: $color-white;
+  height: 100vh;
+  max-width: $booking-size;
+  width: 100%;
+  padding: $padding*1.5;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+
+  h2 {
+    color: $color-white;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  .form-field {
+    background-color: lighten($color-primary, 25);
+  }
+}
+
+.closeBtn {
+  align-items: center;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  position: absolute;
+  right: $padding;
+  width: 40px;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+
+  .icon {
+    color: white !important;
+    font-size: 1.5rem;
+  }
+}
+
+.book-hide {
+  right: -100%;
+  transition: $transition;
+}
+
+.book-show {
+  right: 0;
+  transition: $transition;
+}
+
+.resume {
+  background-color: rgba($color-dark, 0.25);
+  border-radius: $rounded;
+  display: flex;
+  margin-top: $padding*2;
+  padding: $padding;
+
+  div {
+    flex: 1;
+    text-align: center;
+
+    span {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    h2 {
+      display: block;
+      padding: 0 0 $padding * -1 0;
+    }
+  }
+}

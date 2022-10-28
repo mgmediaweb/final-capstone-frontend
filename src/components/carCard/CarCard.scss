@@ -1,0 +1,50 @@
+@import "../../config.scss";
+
+.car-card {
+  @include flex-center(column);
+
+  text-align: center;
+  width: 100%;
+  padding: $padding;
+
+  .card-container {
+    @include flex-center(column);
+
+    max-width: 300px;
+
+    .social-icons {
+      @include flex-center(row);
+
+      gap: $padding;
+      margin-top: $spacer;
+
+      li {
+        @include flex-center(row);
+
+        border: gray solid 1px;
+        border-radius: 50%;
+        padding: $padding;
+        color: gray;
+      }
+    }
+
+    .car-description {
+      color: gray;
+    }
+  }
+
+  img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: 0.2s;
+    cursor: pointer;
+    margin-bottom: $spacer;
+
+    &:hover {
+      outline: $color-primary 1px solid;
+      outline-offset: calc($padding / 2);
+    }
+  }
+}

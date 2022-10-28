@@ -1,0 +1,166 @@
+@import "../../config.scss";
+
+nav {
+  width: 90%;
+  font-weight: 700;
+  font-size: 1.15rem;
+
+  ul {
+    list-style-type: none;
+  }
+
+  a {
+    background-color: $color-white;
+    border-right: 1px solid $color-silver;
+    color: $color-dark;
+    display: block;
+    margin-right: -2px;
+    padding: $padding * 1.25;
+    padding-bottom: $padding * 0.9;
+    text-decoration: none;
+    transition: $transition;
+
+    &:hover {
+      background-color: $color-silver;
+      border-right: 1px solid $color-silver;
+      text-decoration: none;
+      transition: $transition;
+    }
+  }
+
+  .active,
+  .active:hover {
+    background-color: $color-primary;
+    border-right: 1px solid $color-primary;
+    color: $color-white;
+  }
+}
+
+.img-container {
+  background: url(../../assets/images/logo.png) no-repeat;
+  background-position: center center;
+  background-size: auto 35%;
+  align-items: center;
+  display: flex;
+  height: $navbar-size;
+  justify-content: center;
+  margin-bottom: 5vh;
+  transition: $transition;
+  width: $navbar-size;
+
+  &:hover {
+    opacity: 0.5;
+    transition: $transition;
+  }
+}
+
+.menuMobile {
+  align-items: center;
+  background-color: $color-white;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px 0 rgba($color-dark, 0.25);
+  display: flex;
+  height: 48px;
+  justify-content: center;
+  left: $padding;
+  position: fixed;
+  top: $padding;
+  width: 48px;
+  z-index: 997;
+
+  .icon {
+    color: $color-dark;
+    font-size: 1.25rem;
+  }
+}
+
+.navbar {
+  background-color: $color-white;
+  box-shadow: 0 0 15px 0 rgba($color-dark, 0.33);
+  border-right: 1px solid $color-silver;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: $navbar-size;
+  z-index: 1000;
+
+  .closeBtn {
+    align-items: center;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    position: absolute;
+    right: $padding;
+    width: 40px;
+    z-index: 1500;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+
+    .icon {
+      color: $color-dark !important;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.navTop {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  &-hide {
+    left: $navbar-size * -1.1;
+    transition: $transition;
+  }
+
+  &-show {
+    left: 0;
+    transition: $transition;
+  }
+}
+
+.logout-button {
+  margin: $padding 0 0 $padding;
+}
+
+.social-icons {
+  padding: $padding;
+  text-align: center;
+  width: 100%;
+
+  ul li {
+    display: inline-block;
+    margin: 0 $padding/2;
+  }
+
+  p {
+    font-size: 0.75rem;
+  }
+}
+
+// #######################################################################################
+// ################################### DESKTOP VERSION ###################################
+// #######################################################################################
+
+@media (min-width: $breakpoint-tablet) {
+  .navbar {
+    box-shadow: none;
+    left: 0;
+
+    .closeBtn {
+      display: none;
+    }
+  }
+
+  .menuMobile {
+    display: none;
+  }
+}

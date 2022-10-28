@@ -1,0 +1,51 @@
+@import '../config.scss';
+
+.page-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  background-color: $color-primary;
+  border-radius: $rounded;
+  padding: 2rem;
+  width: 100%;
+  min-width: 300px;
+  max-width: 400px;
+  text-align: center;
+  margin: auto;
+  border: $rounded;
+  box-shadow:
+    20px 20px 40px #bebebe5f,
+    -20px -20px 60px #fff;
+
+  h2 {
+    color: white;
+  }
+}
+
+.form-field {
+  background-color: lighten($color-primary, 25);
+  margin-bottom: $padding;
+}
+
+.signin-message {
+  margin-top: $spacer;
+  color: $color-dark;
+
+  a {
+    padding-left: 0.5rem;
+    color: white;
+  }
+}
+
+.error-message {
+  display: none;
+  color: red;
+
+  &.active {
+    display: block;
+  }
+}

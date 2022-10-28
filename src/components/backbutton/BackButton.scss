@@ -1,0 +1,41 @@
+@import "../../config.scss";
+
+.back-link {
+  align-items: center;
+  background-color: $color-primary;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  bottom: 50%;
+  color: $color-white;
+  display: flex;
+  justify-content: flex-end;
+  left: 0;
+  padding: $padding*1.25 $padding $padding*1.25 0;
+  position: fixed;
+  transition: $transition;
+  user-select: none;
+  width: 40px;
+  z-index: 998;
+
+  &:hover {
+    background-color: darken($color-primary, 10);
+    cursor: pointer;
+    transition: $transition;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+  }
+}
+
+// #######################################################################################
+// ################################### DESKTOP VERSION ###################################
+// #######################################################################################
+
+@media (min-width: $breakpoint-tablet) {
+  .back-link {
+    bottom: 5vh;
+    left: $navbar-size;
+    width: 60px;
+  }
+}

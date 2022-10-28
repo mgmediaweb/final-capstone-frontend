@@ -1,0 +1,30 @@
+// Colors
+
+/*
+$color-active: #008b8b;
+$color-background: #000;
+$color-danger: #b10000;
+*/
+$color-dark: #343434;
+$color-primary: #98bd2a;
+$color-silver: #e6e6e6;
+$color-white: #fff;
+
+// Breakbpoints
+$breakpoint-tablet: 760px;
+$breakpoint-desktop: 1280px;
+
+$booking-size: 300px;
+$navbar-size: 200px;
+$padding: 10px;
+$rounded: 4px;
+$transition: 0.5s;
+$spacer: $padding*3;
+
+//Mixins
+@mixin flex-center($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
