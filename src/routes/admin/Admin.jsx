@@ -43,6 +43,14 @@ const AdminScreen = () => {
     return (
       <div className="container page-admin">
         <h1>You need admin access for this page</h1>
+        <iframe
+          title="you shall not pass"
+          src="https://giphy.com/embed/njYrp176NQsHS"
+          width="480"
+          height="200"
+          frameBorder="0"
+          className="giphy-embed"
+        />
       </div>
     );
   }

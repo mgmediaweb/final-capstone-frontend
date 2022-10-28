@@ -72,7 +72,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-This site is based on the design created by [Nelson Sakwa](https://www.behance.net/sakwadesignstudio), this design is under the free license [Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/).
+This site is based on the design created by [Murat Korkmaz](https://www.behance.net/muratk), this design is under the free license [Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/).
 
 ## 📝 License
 
