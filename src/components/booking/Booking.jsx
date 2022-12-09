@@ -80,7 +80,7 @@ const Booking = (props) => {
       },
       body: JSON.stringify(postBody),
     };
-    await fetch(`https://elsonotake-backend.herokuapp.com/api/v1/users/${user}/bookings`, postBooking);
+    await fetch(`https://elsonotake-exo-cars.onrender.com/api/v1/users/${user}/bookings`, postBooking);
     window.location.href = '/models';
   };
 

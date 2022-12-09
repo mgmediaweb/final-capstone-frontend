@@ -35,7 +35,7 @@ const AdminScreen = () => {
       },
     };
 
-    await fetch(`https://elsonotake-backend.herokuapp.com/api/v1/vehicles/${vehicle.id}`, deleteCar);
+    await fetch(`https://elsonotake-exo-cars.onrender.com/api/v1/vehicles/${vehicle.id}`, deleteCar);
     window.location.href = '/models';
   };
 
