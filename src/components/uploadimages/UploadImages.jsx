@@ -38,7 +38,7 @@ const UploadImages = (props) => {
 
   const apiConnection = async (photoToPublish) => {
     const body = { photo: photoToPublish };
-    const url = `https://elsonotake-backend.herokuapp.com/api/v1/vehicles/${vehicle.id}/galleries`;
+    const url = `https://elsonotake-exo-cars.onrender.com/api/v1/vehicles/${vehicle.id}/galleries`;
 
     const response = await fetch(url, {
       method: 'POST',
