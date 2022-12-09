@@ -26,7 +26,7 @@ const NewScreen = () => {
       },
       body: JSON.stringify(postBody),
     };
-    await fetch('https://elsonotake-backend.herokuapp.com/api/v1/vehicles', postItem);
+    await fetch('https://elsonotake-exo-cars.onrender.com/api/v1/vehicles', postItem);
     window.location.href = '/models';
   };
 
