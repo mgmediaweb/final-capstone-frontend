@@ -1,7 +1,7 @@
 {
   "name": "final-capstone-frontend",
   "version": "0.1.0",
-  "homepage": "http://elsonotake.github.io/final-capstone-frontend",
+  "homepage": "https://elsonotake.github.io/final-capstone-frontend",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.6",
