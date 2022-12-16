@@ -19,7 +19,7 @@ In this project, we created a website for renting exotic cars (exo-cars). It fet
 
 ### Live demo
 
-[EXO-CARS](https://exo-cars.herokuapp.com)
+[EXO-CARS](https://final-capstone-frontend-fkvzig4w0-elsonotake.vercel.app/login)
 
 ### Install
 
